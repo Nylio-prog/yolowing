@@ -31,10 +31,13 @@ def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", type=str, default="input_files/video.mp4", help="Path to the input video file")
-    parser.add_argument("-o", type=str, default="output_files/video_annotated.mp4", help="Path to the output video file")
+    parser.add_argument("-o", type=str, default="video_annotated.mp4", help="Output video file name, will always be in output_files folder")
     parser.add_argument("--live-show", action="store_true", help="Show the annotation in live")
     parser.add_argument("-fps", type=float, default=25.0, help="Desired fps for the output video")
     args = parser.parse_args()
+
+    #Always putting the file in the output folder
+    args.o = "output_files/" + args.o
 
     # Create VideoCapture objects for input and output videos
     cap = cv2.VideoCapture(args.i)
