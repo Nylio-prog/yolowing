@@ -103,15 +103,21 @@ def main():
 
             class_id = SPECIES_LIST.index(args.s)
 
-            image_path = os.path.join(image_dir, f"{frame_count:012}.jpg")
+            # Generate a timestamp-based unique identifier
+            timestamp = int(time.time())  # Using seconds
+            frame_id = f"{frame_count:04}"
+
+            # Combine the timestamp and frame_id to create a 12-character identifier
+            unique_id = f"{timestamp:08}{frame_id}"
+
+            # Create image and label paths with the unique identifier
+            image_path = os.path.join(image_dir, f"{unique_id}.jpg")
+            label_path = os.path.join(label_dir, f"{unique_id}.txt")
+
+            # Save the image and label with the unique identifier
             save_image(image_path, frame)
-
-            bird_annotation = create_bird_annotation(
-                class_id, x1, y1, x2, y2, image_width, image_height)
-
-            # Must change the name otherwise it'll overwrite when putting multiple videos
-            label_path = os.path.join(label_dir, f"{frame_count:012}.txt")
-            save_label(label_path, bird_annotation)
+            save_label(label_path, create_bird_annotation(
+                class_id, x1, y1, x2, y2, image_width, image_height))
 
         frame_count += 1
 
