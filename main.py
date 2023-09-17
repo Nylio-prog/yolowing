@@ -69,6 +69,7 @@ def main():
 
         if cv2.waitKey(30) == 27:
             break
+
         prev_end_time = time.time()
         elapsed_time = prev_end_time - start_time
 
