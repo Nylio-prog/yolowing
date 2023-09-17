@@ -13,6 +13,9 @@ def display_available_gpu_devices():
         for device_id in range(num_devices):
             device_name = torch.cuda.get_device_name(device_id)
             print(f"GPU Device {device_id}: {device_name}")
+            device = torch.device("cuda")
+            num_cuda_cores = torch.cuda.get_device_properties(device)
+            print(f"Properties: {num_cuda_cores}")
 
 if __name__ == "__main__":
     display_available_gpu_devices()
