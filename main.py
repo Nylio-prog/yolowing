@@ -3,6 +3,7 @@ import argparse
 from ultralytics import YOLO
 import supervision as sv
 import torch
+import time
 
 def main():
     # Check if CUDA (GPU support) is available
@@ -30,10 +31,12 @@ def main():
         text_scale=1
     )
 
-    start_time = cv2.getTickCount()
-    frame_count = 0
+    prev_end_time = 0
+    start_time = 0
 
     while True:
+        start_time = time.time() 
+
         ret, frame = cap.read()
 
         if not ret:
@@ -52,21 +55,23 @@ def main():
             labels=labels
         )
 
-        # Calculate FPS
-        end_time = cv2.getTickCount()
-        total_time = (end_time - start_time) / cv2.getTickFrequency()
-        fps = frame_count / total_time
-        fps_text = f"FPS: {fps:.2f}"
+        #Can't compute it for first frame
+        if (prev_end_time > 0):
+            # Calculate the FPS of frame - 1
+            fps = 1.0 / elapsed_time
 
-        # Add FPS text to the top-left corner of the frame
-        cv2.putText(frame, fps_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+            # Add FPS text to the top-left corner of the frame
+            fps_text = f"FPS: {fps:.2f}"
+            # Add FPS text to the top-left corner of the frame
+            cv2.putText(frame, fps_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
         cv2.imshow("yolov8", frame)
 
         if cv2.waitKey(30) == 27:
             break
+        prev_end_time = time.time()
+        elapsed_time = prev_end_time - start_time
 
-        frame_count += 1
 
     cap.release()
     cv2.destroyAllWindows()
