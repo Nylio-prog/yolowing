@@ -19,6 +19,8 @@ def main():
         -fps (float, optional): Desired frames per second (FPS) for the output video (default: 25.0).
     """
 
+    global_start_time = time.time()
+
     # Check if CUDA (GPU support) is available
     use_gpu = torch.cuda.is_available()
     
@@ -102,6 +104,9 @@ def main():
     cap.release()
     out.release()
     cv2.destroyAllWindows()
+
+    global_elapsed_time = time.time() - global_start_time
+    print(f"The whole process took {global_elapsed_time} seconds to execute")
 
 if __name__ == "__main__":
     main()
