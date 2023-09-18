@@ -7,9 +7,8 @@ import os
 import random
 
 from ultralytics import YOLO
+from tqdm import tqdm
 from utils import SPECIES_LIST
-
-BASE_DIR = "created_dataset"
 
 
 def create_images_labels_directories(images_train_dir, images_val_dir, labels_train_dir, labels_val_dir):
@@ -45,16 +44,19 @@ def main():
     Creates a part of the dataset with images and labels by using pretrained model and merging every animals into birds and giving which bird species it is.
 
     Args:
-        -i (str): Path to the input video file.
+        -i (str): Path to the input video file (default="input_files/video.mp4").
+        -o (str): Path to the input video file (default="created_dataset").
         -s (str): Name of species to annotate for each boxes on every frames.
-        -n (int): Number of the video.
-        -p (float): Probability of being in the train folder.
+        -n (int): Number of the video (default=0).
+        -p (float): Probability of being in the train folder (default=0.8).
     """
 
     # Parse command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", type=str, default="input_files/video.mp4",
                         help="Path to the input video file")
+    parser.add_argument("-o", type=str, default="created_dataset",
+                        help="Path to the output video file")
     parser.add_argument("-s",  type=str, choices=SPECIES_LIST,
                         help="Annotate every animal boxes with this parameter. Must be in the list of species")
     parser.add_argument("-n",  type=int, default=0,
@@ -86,10 +88,10 @@ def main():
     for key in range(14, 25):
         model.names[key] = 'bird'
 
-    images_train_dir = os.path.join(BASE_DIR, "images/train")
-    images_val_dir = os.path.join(BASE_DIR, "images/val")
-    labels_train_dir = os.path.join(BASE_DIR, "labels/train")
-    labels_val_dir = os.path.join(BASE_DIR, "labels/val")
+    images_train_dir = os.path.join(args.o, "images/train")
+    images_val_dir = os.path.join(args.o, "images/val")
+    labels_train_dir = os.path.join(args.o, "labels/train")
+    labels_val_dir = os.path.join(args.o, "labels/val")
 
     # Split every frame on the video into train or validation folder to avoid the model to learn the video and just recognize from which video the frame is from
     if random.random() < args.p:
@@ -112,7 +114,7 @@ def main():
         if not ret:
             break
 
-        result = model(frame, agnostic_nms=True)[0]
+        result = model(frame, agnostic_nms=True, verbose=False)[0]
         detections = sv.Detections.from_ultralytics(result)
         labels = [
             f"{model.model.names[class_id]}"
@@ -142,13 +144,14 @@ def main():
             save_label(label_path, create_bird_annotation(
                 class_id, x1, y1, x2, y2, image_width, image_height))
 
-        frame_count += 1
+            frame_count += 1
 
     cap.release()
     cv2.destroyAllWindows()
 
     global_elapsed_time = time.time() - global_start_time
-    print(f"The whole process took {global_elapsed_time} seconds to execute")
+    print(
+        f"The process of this video took {global_elapsed_time} seconds to execute")
 
 
 if __name__ == "__main__":
