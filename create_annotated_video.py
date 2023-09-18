@@ -4,14 +4,20 @@ import supervision as sv
 import torch
 import time
 import os
+import random
 
 from ultralytics import YOLO
 from utils import SPECIES_LIST
 
+BASE_DIR = "created_dataset"
 
-def create_directories(image_dir, label_dir):
-    os.makedirs(image_dir, exist_ok=True)
-    os.makedirs(label_dir, exist_ok=True)
+
+def create_images_labels_directories(images_train_dir, images_val_dir, labels_train_dir, labels_val_dir):
+
+    os.makedirs(images_train_dir, exist_ok=True)
+    os.makedirs(images_val_dir, exist_ok=True)
+    os.makedirs(labels_train_dir, exist_ok=True)
+    os.makedirs(labels_val_dir, exist_ok=True)
 
 
 def create_bird_annotation(class_id, x1, y1, x2, y2, width, height):
@@ -41,7 +47,21 @@ def main():
     Args:
         -i (str): Path to the input video file.
         -s (str): Name of species to annotate for each boxes on every frames.
+        -n (int): Number of the video.
+        -p (float): Probability of being in the train folder.
     """
+
+    # Parse command line arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", type=str, default="input_files/video.mp4",
+                        help="Path to the input video file")
+    parser.add_argument("-s",  type=str, choices=SPECIES_LIST,
+                        help="Annotate every animal boxes with this parameter. Must be in the list of species")
+    parser.add_argument("-n",  type=int, default=0,
+                        help="Number of the video. Used to name the output")
+    parser.add_argument("-p",  type=float, default=0.8,
+                        help="Probability of being in the train folder. 1-p probability of being in validation folder")
+    args = parser.parse_args()
 
     global_start_time = time.time()
 
@@ -53,14 +73,6 @@ def main():
         print(f"GPU Device: {device_name}")
     else:
         print("No GPU detected. Using CPU.")
-
-    # Parse command line arguments
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-i", type=str, default="input_files/video.mp4",
-                        help="Path to the input video file")
-    parser.add_argument("-s",  type=str, choices=SPECIES_LIST,
-                        help="Annotate every animal boxes with this parameter. Must be in the list of species")
-    args = parser.parse_args()
 
     # Create VideoCapture objects for input and output videos
     cap = cv2.VideoCapture(args.i)
@@ -74,10 +86,23 @@ def main():
     for key in range(14, 25):
         model.names[key] = 'bird'
 
-    image_dir = "created_dataset/images/train"
-    label_dir = "created_dataset/labels/train"
+    images_train_dir = os.path.join(BASE_DIR, "images/train")
+    images_val_dir = os.path.join(BASE_DIR, "images/val")
+    labels_train_dir = os.path.join(BASE_DIR, "labels/train")
+    labels_val_dir = os.path.join(BASE_DIR, "labels/val")
 
-    create_directories(image_dir, label_dir)
+    # Split every frame on the video into train or validation folder to avoid the model to learn the video and just recognize from which video the frame is from
+    if random.random() < args.p:
+        print("Will be in the train folder")
+        image_dir = images_train_dir
+        label_dir = labels_train_dir
+    else:
+        print("Will be in the validation folder")
+        image_dir = images_val_dir
+        label_dir = labels_val_dir
+
+    create_images_labels_directories(
+        images_train_dir, images_val_dir, labels_train_dir, labels_val_dir)
 
     frame_count = 0
 
@@ -103,12 +128,10 @@ def main():
 
             class_id = SPECIES_LIST.index(args.s)
 
-            # Generate a timestamp-based unique identifier
-            timestamp = int(time.time())  # Using seconds
             frame_id = f"{frame_count:04}"
 
             # Combine the timestamp and frame_id to create a 12-character identifier
-            unique_id = f"{timestamp:08}{frame_id}"
+            unique_id = f"{args.n:08}{frame_id}"
 
             # Create image and label paths with the unique identifier
             image_path = os.path.join(image_dir, f"{unique_id}.jpg")
