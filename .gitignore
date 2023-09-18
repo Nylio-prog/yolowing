@@ -1,3 +1,5 @@
 __pycache__
 venv/
 created_dataset/
+output_training/
+output_files/
