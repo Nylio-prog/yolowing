@@ -5,12 +5,27 @@ from tqdm import tqdm
 
 
 def main():
+    """
+    Creates a dataset to train a YOLOv8 model for bird detection.
+
+    This script processes a set of input videos and generates an annotated dataset for training a YOLOv8
+    model for bird detection. It iterates through the input videos, annotates each of them into one frame with the specified bird species,
+    and divides each frame into train and validation sets based on a given probability.
+
+    Args:
+        -i (str): Input folder where videos are located.
+        -o (str): Output folder where annotated frames will be stored.
+        -p (float): Probability of a video to be in the train set (1 - p probability for validation).
+
+    Returns:
+        None
+    """
     parser = argparse.ArgumentParser(
         description="Create a dataset to train a YOLOv8 model for bird detection")
     parser.add_argument("-i", type=str,
                         default="input_files", help="Input folder where videos are contained")
     parser.add_argument("-o", type=str,
-                        default="created_dataset", help="Output folder where videos will be stored")
+                        default="created_dataset", help="Output folder where frames will be stored")
     parser.add_argument("-p",  type=float, default=0.8,
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
 
