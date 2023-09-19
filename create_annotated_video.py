@@ -122,9 +122,15 @@ def main():
             in detections
         ]
 
+        # We only want to detect one bird in the image as there could be multiple but the species given is only one.
+        # This could possibly select the wrong bird's species if there are 2 and the first label is the wrong bird's species.
+        # Need to be more thoroughly inspected once we have real data.
+        already_found_bird = False
         for label in labels:
-            if (label != "bird"):
+            if (label != "bird" or already_found_bird):
                 break
+
+            already_found_bird = True
 
             x1, y1, x2, y2 = detections[0].xyxy[0][:4]
 
