@@ -9,6 +9,7 @@ test: # test images (optional)
 
 # Classes
 names:
-  0: not bird
-  1: mésange charbonnière
-  2: perruche à collier
+  0: autre animal
+  1: oiseau inconnu
+  2: mésange charbonnière
+  3: perruche à collier
