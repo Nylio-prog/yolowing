@@ -12,5 +12,4 @@ yolov8s.pt
 yolov8n.pt
 dataset/
 preprocessed_videos/
-best.pt
 test.py
