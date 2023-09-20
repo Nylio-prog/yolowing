@@ -153,7 +153,6 @@ def main():
             frame_count += 1
 
     cap.release()
-    cv2.destroyAllWindows()
 
     global_elapsed_time = time.time() - global_start_time
     print(
