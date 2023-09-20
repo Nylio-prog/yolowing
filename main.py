@@ -1,6 +1,5 @@
 import cv2
 import argparse
-import supervision as sv
 import torch
 import time
 
@@ -57,12 +56,6 @@ def main():
 
     model = YOLO(args.m)
 
-    box_annotator = sv.BoxAnnotator(
-        thickness=2,
-        text_thickness=2,
-        text_scale=1
-    )
-
     prev_end_time = 0
     start_time = 0
 
@@ -78,7 +71,7 @@ def main():
 
         # Visualize the results on the frame
         annotated_frame = result.plot(
-            pil=True, line_width=4)
+            pil=True, line_width=4, font_size=30)
 
         # Can't compute it for first frame
         if (prev_end_time > 0 and not (args.not_show)):
@@ -89,7 +82,7 @@ def main():
             fps_text = f"FPS: {fps:.2f}"
             # Add FPS text to the top-left corner of the frame
             cv2.putText(annotated_frame, fps_text, (10, 30),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
 
         if (not (args.not_show)):
             # Display the annotated frame

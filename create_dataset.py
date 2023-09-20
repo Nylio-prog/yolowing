@@ -68,23 +68,32 @@ def main():
 
     # Iterate over list_videos_path
     for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
+        try:
+            video_id = os.path.splitext(os.path.basename(video_path))[0]
 
-        video_id = os.path.splitext(os.path.basename(video_path))[0]
+            # Define the arguments to pass
+            script_command = [
+                "python",  # Command to run Python
+                "create_annotated_video.py",  # Name of your script
+                "-i", video_path,  # Video path
+                "-o", args.o,  # Output folder
+                # Actual species to annotate
+                "-s", f'"{species_dict[video_id]}"',
+                "-n", str(number_video),  # Number of the video
+                "-p", str(args.p)  # Probability of being in the train set
+            ]
 
-        # Define the arguments to pass
-        script_command = [
-            "python",  # Command to run Python
-            "create_annotated_video.py",  # Name of your script
-            "-i", video_path,  # Video path
-            "-o", args.o,  # Output folder
-            "-s", f'"{species_dict[video_id]}"',  # Actual species to annotate
-            "-n", str(number_video),  # Number of the video
-            "-p", str(args.p)  # Probability of being in train set
-        ]
+            # Execute the combined command using os.system
+            full_command = " ".join(script_command)
+            return_code = os.system(full_command)
 
-        # Execute the combined command using os.system
-        full_command = " ".join(script_command)
-        os.system(full_command)
+            if return_code != 0:
+                print(
+                    f"Error encountered while processing {video_path}. Skipping...")
+
+        except KeyboardInterrupt:
+            print("Process interrupted. Exiting...")
+            break
 
     print(f"Created dataset at {args.o}")
 
