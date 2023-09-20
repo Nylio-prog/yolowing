@@ -19,15 +19,15 @@ https://snd.gu.se/en/catalogue/dataset/2021-316-1
 Once you have the videos directory which contains the videos of the birds from 2021 and before, you can call these functions :
 
 ```
-python3 preprocess_and_copy_downloaded_data.py -i path/to/videos
+python preprocess_and_copy_downloaded_data.py -i path/to/videos
 
-python3 create_dataset.py
+python create_dataset.py
 
-python3 train_model.py
+python train_model.py
 ```
 
 To predict a video, do this after putting the weights best.pt from output_training into the working directory :
 
 ```
-python3 main.py -i path/to/video/file
+python main.py -i path/to/video/file
 ```
