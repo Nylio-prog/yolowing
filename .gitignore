@@ -5,7 +5,6 @@ output_training/
 output_files/
 videos/
 db_export.txt
-input_files/piou.mp4
 yolov8x.pt
 yolov8l.pt
 yolov8m.pt
