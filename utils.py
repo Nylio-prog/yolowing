@@ -1,1 +1,1 @@
-SPECIES_LIST = ["Autre", "Mésange bleue", "Verdier d'Europe", "Mésange charbonnière", "Mésange noire", "Chardonneret élégant", "Mésange Nonnette", "Rougegorge familier", "Moineau friquet", "Moineau domestique", "Pinson du Nord"]
+SPECIES_LIST = ["Mésange bleue", "Verdier d'Europe", "Mésange charbonnière", "Mésange noire", "Chardonneret élégant", "Mésange Nonnette", "Rougegorge familier", "Moineau friquet", "Moineau domestique", "Pinson du Nord", "Autre"]
