@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # create python virtual environment
-python3 -m venv venv
+python -m venv yolowing
 
 # activate the virtual environment
-source venv/bin/activate
+source yolowing/bin/activate
 
 # install dependencies
 pip install -r requirements.txt

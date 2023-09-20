@@ -2,6 +2,7 @@ import argparse
 import os
 from tqdm import tqdm
 import csv
+import shutil
 
 
 def main():
@@ -13,7 +14,7 @@ def main():
     and divides each frame into train and validation sets based on a given probability.
 
     Args:
-        -i (str): Input folder where videos are located.
+        -i (str): Input folder where preprocessed videos are located.
         -o (str): Output folder where annotated frames will be stored.
         --db-file(str): Database to read from the species.
         -p (float): Probability of a video to be in the train set (1 - p probability for validation).
@@ -24,7 +25,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Create a dataset to train a YOLOv8 model for bird detection")
     parser.add_argument("-i", type=str,
-                        default="input_files", help="Input folder where videos are contained")
+                        default="preprocessed_videos", help="Input folder where preprocessed videos are contained")
     parser.add_argument("-o", type=str,
                         default="created_dataset", help="Output folder where frames will be stored")
     parser.add_argument("--db-file", type=str,
@@ -56,25 +57,19 @@ def main():
             if species != 'NA':
                 species_dict[video_id] = species
 
-    # Filter list_videos_path based on species_dict
-    valid_list_videos_path = [
-        video_path for video_path in list_videos_path
-        if os.path.splitext(os.path.basename(video_path))[0] in species_dict
-    ]
+    print(f"{len(list_videos_path)} in total")
 
-    print(f"{len(valid_list_videos_path)} videos were annotated out of {len(list_videos_path)} in total")
+    # Delete the entire folder and its contents if it exists
+    if os.path.exists(args.o):
+        shutil.rmtree(args.o)
+        print(f"Deleted existing {args.o} folder")
 
     print("Creating dataset ...")
 
-    # Iterate over valid_list_videos_path
-    for number_video, video_path in tqdm(enumerate(valid_list_videos_path), total=len(valid_list_videos_path)):
+    # Iterate over list_videos_path
+    for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
 
         video_id = os.path.splitext(os.path.basename(video_path))[0]
-
-        # Not all videos are annotated but we don't want to create
-        # dataset without annotation so we skip the for loop
-        if (video_id not in species_dict):
-            continue
 
         # Define the arguments to pass
         script_command = [
@@ -90,6 +85,8 @@ def main():
         # Execute the combined command using os.system
         full_command = " ".join(script_command)
         os.system(full_command)
+
+    print(f"Created dataset at {args.o}")
 
 
 if __name__ == "__main__":

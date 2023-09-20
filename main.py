@@ -17,18 +17,20 @@ def main():
     Args:
         -i (str): Path to the input video file.
         -o (str): Path to the output video file.
-        --live-show (bool, optional): Show the annotation in real-time (default: False).
+        --not-show (bool, optional): Show the annotation in real-time (default: False).
         -fps (float, optional): Desired frames per second (FPS) for the output video (default: 25.0).
     """
 
     # Parse command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", type=str, default="input_files/video.mp4",
+    parser.add_argument("-i", type=str, default="input_files/piou.mp4",
                         help="Path to the input video file")
     parser.add_argument("-o", type=str, default="video_annotated.mp4",
                         help="Output video file name, will always be in output_files folder")
-    parser.add_argument("--live-show", action="store_true",
-                        help="Show the annotation in live")
+    parser.add_argument("-m", type=str, default="best.pt",
+                        help="Model to use")
+    parser.add_argument("--not-show", action="store_true",
+                        help="Show the annotation in not")
     parser.add_argument("-fps", type=float, default=25.0,
                         help="Desired fps for the output video")
     args = parser.parse_args()
@@ -53,7 +55,7 @@ def main():
     out = cv2.VideoWriter(args.o, fourcc, args.fps, (int(
         cap.get(3)), int(cap.get(4))))  # cap.get(3) returns width
 
-    model = YOLO("best.pt")
+    model = YOLO(args.m)
 
     box_annotator = sv.BoxAnnotator(
         thickness=2,
@@ -86,7 +88,7 @@ def main():
         )
 
         # Can't compute it for first frame
-        if (prev_end_time > 0 and args.live_show):
+        if (prev_end_time > 0 and not (args.not_show)):
             # Calculate the FPS of frame - 1
             fps = 1.0 / elapsed_time
 
@@ -96,8 +98,8 @@ def main():
             cv2.putText(frame, fps_text, (10, 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
-        if (args.live_show):
-            cv2.imshow("yolov8", frame)
+        if (not (args.not_show)):
+            cv2.imshow("Bird detection", frame)
 
         if cv2.waitKey(30) == 27:
             break

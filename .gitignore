@@ -6,7 +6,12 @@ output_files/
 videos/
 db_export.txt
 input_files/piou.mp4
-yolov8l.pt
 yolov8x.pt
+yolov8l.pt
+yolov8m.pt
+yolov8s.pt
+yolov8n.pt
 dataset/
+preprocessed_videos/
 best.pt
+test.py
