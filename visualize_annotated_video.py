@@ -26,7 +26,7 @@ def main():
             image = cv2.imread(image_path)
             height, width, _ = image.shape  # Get image dimensions
 
-            with open(label_file, "r", encoding="utf-8") as f:  # Specify UTF-8 encoding
+            with open(label_file, "r", encoding="utf-8") as f:
                 lines = f.readlines()
 
             pil_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
@@ -36,13 +36,17 @@ def main():
             for line in lines:
                 parts = line.strip().split(" ")
                 class_id = int(parts[0])
-                x1, y1, x2, y2 = map(float, parts[1:5])
+                center_x, center_y, width_normalized, height_normalized = map(
+                    float, parts[1:5])
 
-                # Scale normalized coordinates to image dimensions
-                x1 = int(x1 * width)
-                y1 = int(y1 * height)
-                x2 = int(x2 * width)
-                y2 = int(y2 * height)
+                # Calculate bounding box coordinates
+                half_width = width_normalized * width / 2
+                half_height = height_normalized * height / 2
+
+                x1 = int((center_x * width) - half_width)
+                y1 = int((center_y * height) - half_height)
+                x2 = int((center_x * width) + half_width)
+                y2 = int((center_y * height) + half_height)
 
                 # Convert class_id to class name using SPECIES_LIST
                 class_name = SPECIES_LIST[class_id]

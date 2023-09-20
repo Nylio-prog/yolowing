@@ -31,9 +31,9 @@ def main():
                         help="Directory for saving training runs and results")
     parser.add_argument("-imgsz", type=int, default=640,
                         help="Input image size")
-    parser.add_argument("-epochs", type=int, default=5,
+    parser.add_argument("-epochs", type=int, default=10,
                         help="Number of training epochs")
-    parser.add_argument("-batch", type=int, default=8,
+    parser.add_argument("-batch", type=int, default=10,
                         help="Batch size for training")
     parser.add_argument("-name", type=str, default="yolov8_birds",
                         help="Name for the folder containing the results of this train")
@@ -52,7 +52,8 @@ def main():
         imgsz=args.imgsz,
         epochs=args.epochs,
         batch=args.batch,
-        name=args.name
+        name=args.name,
+        device=0
     )
 
 

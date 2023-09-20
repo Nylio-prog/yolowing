@@ -7,7 +7,6 @@ import os
 import random
 
 from ultralytics import YOLO
-from tqdm import tqdm
 from utils import SPECIES_LIST
 
 
@@ -20,13 +19,14 @@ def create_images_labels_directories(images_train_dir, images_val_dir, labels_tr
 
 
 def create_bird_annotation(class_id, x1, y1, x2, y2, width, height):
-    # Normalize coordinates
-    x1_normalized = x1 / width
-    y1_normalized = y1 / height
-    x2_normalized = x2 / width
-    y2_normalized = y2 / height
+    # Calculate center, width, and height normalized values
+    center_x_normalized = ((x1 + x2) / 2) / width
+    center_y_normalized = ((y1 + y2) / 2) / height
+    width_normalized = (x2 - x1) / width
+    height_normalized = (y2 - y1) / height
 
-    bird_annotation = f"{class_id} {x1_normalized:.6f} {y1_normalized:.6f} {x2_normalized:.6f} {y2_normalized:.6f}\n"
+    # This is the dataset format that is required by YOLOv8
+    bird_annotation = f"{class_id} {center_x_normalized:.6f} {center_y_normalized:.6f} {width_normalized:.6f} {height_normalized:.6f}\n"
     return bird_annotation
 
 

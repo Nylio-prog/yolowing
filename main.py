@@ -21,17 +21,6 @@ def main():
         -fps (float, optional): Desired frames per second (FPS) for the output video (default: 25.0).
     """
 
-    global_start_time = time.time()
-
-    # Check if CUDA (GPU support) is available
-    use_gpu = torch.cuda.is_available()
-
-    if use_gpu:
-        device_name = torch.cuda.get_device_name(0)
-        print(f"GPU Device: {device_name}")
-    else:
-        print("No GPU detected. Using CPU.")
-
     # Parse command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", type=str, default="input_files/video.mp4",
@@ -44,6 +33,17 @@ def main():
                         help="Desired fps for the output video")
     args = parser.parse_args()
 
+    global_start_time = time.time()
+
+    # Check if CUDA (GPU support) is available
+    use_gpu = torch.cuda.is_available()
+
+    if use_gpu:
+        device_name = torch.cuda.get_device_name(0)
+        print(f"GPU Device: {device_name}")
+    else:
+        print("No GPU detected. Using CPU.")
+
     # Always putting the file in the output folder
     args.o = "output_files/" + args.o
 
@@ -53,7 +53,7 @@ def main():
     out = cv2.VideoWriter(args.o, fourcc, args.fps, (int(
         cap.get(3)), int(cap.get(4))))  # cap.get(3) returns width
 
-    model = YOLO("yolov8l.pt")
+    model = YOLO("best.pt")
 
     box_annotator = sv.BoxAnnotator(
         thickness=2,

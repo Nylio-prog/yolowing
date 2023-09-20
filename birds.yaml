@@ -9,6 +9,25 @@ test: # test images (optional)
 
 # Classes
 names:
-  0: not bird
-  1: mésange charbonnière
-  2: perruche à collier
+  0: Pas d'oiseau
+  1: Pinson du Nord
+  2: Mésange charbonnière
+  3: Verdier d'Europe
+  4: Merle noir
+  5: Rougegorge familier
+  6: Moineau domestique
+  7: Sittelle torchepot
+  8: Grosbec casse-noyaux
+  9: Pic épeiche
+  10: Bouvreuil pivoine
+  11: Ecureuil roux
+  12: Geai des chênes
+  13: Chardonneret élégant
+  14: Mésange bleue
+  15: Mésange Nonnette
+  16: Mésange noire
+  17: Accenteur mouchet
+  18: Mésange huppée
+  19: Moineau friquet
+  20: Pinson des arbres
+  21: Tourterelle turque

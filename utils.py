@@ -1,4 +1,24 @@
 SPECIES_LIST = [
-    "mésange charbonnière",
-    "perruche à collier"
+    "Pas d'oiseau",
+    "Pinson du Nord",
+    "Mésange charbonnière",
+    "Verdier d'Europe",
+    "Merle noir",
+    "Rougegorge familier",
+    "Moineau domestique",
+    "Sittelle torchepot",
+    "Grosbec casse-noyaux",
+    "Pic épeiche",
+    "Bouvreuil pivoine",
+    "Ecureuil roux",
+    "Geai des chênes",
+    "Chardonneret élégant",
+    "Mésange bleue",
+    "Mésange Nonnette",
+    "Mésange noire",
+    "Accenteur mouchet",
+    "Mésange huppée",
+    "Moineau friquet",
+    "Pinson des arbres",
+    "Tourterelle turque"
 ]
