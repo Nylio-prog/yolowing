@@ -88,7 +88,7 @@ def main():
             # Add FPS text to the top-left corner of the frame
             fps_text = f"FPS: {fps:.2f}"
             # Add FPS text to the top-left corner of the frame
-            cv2.putText(frame, fps_text, (10, 30),
+            cv2.putText(annotated_frame, fps_text, (10, 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
         if (not (args.not_show)):
@@ -99,7 +99,7 @@ def main():
             break
 
         # Write the frame with bounding boxes to the output video
-        out.write(frame)
+        out.write(annotated_frame)
 
         prev_end_time = time.time()
         elapsed_time = prev_end_time - start_time
