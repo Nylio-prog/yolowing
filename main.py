@@ -75,17 +75,10 @@ def main():
             break
 
         result = model(frame, agnostic_nms=True)[0]
-        detections = sv.Detections.from_ultralytics(result)
-        labels = [
-            f"{model.model.names[class_id]} {confidence:0.2f}"
-            for _, _, confidence, class_id, _
-            in detections
-        ]
-        frame = box_annotator.annotate(
-            scene=frame,
-            detections=detections,
-            labels=labels
-        )
+
+        # Visualize the results on the frame
+        annotated_frame = result.plot(
+            pil=True, line_width=4)
 
         # Can't compute it for first frame
         if (prev_end_time > 0 and not (args.not_show)):
@@ -99,7 +92,8 @@ def main():
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
         if (not (args.not_show)):
-            cv2.imshow("Bird detection", frame)
+            # Display the annotated frame
+            cv2.imshow("YOLOv8 Inference", annotated_frame)
 
         if cv2.waitKey(30) == 27:
             break
