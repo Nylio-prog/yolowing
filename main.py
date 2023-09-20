@@ -22,7 +22,7 @@ def main():
 
     # Parse command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", type=str, default="input_files/piou.mp4",
+    parser.add_argument("-i", type=str, default="input_files/video.mp4",
                         help="Path to the input video file")
     parser.add_argument("-o", type=str, default="video_annotated.mp4",
                         help="Output video file name, will always be in output_files folder")

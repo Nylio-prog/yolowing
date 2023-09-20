@@ -8,12 +8,14 @@ from ultralytics import YOLO
 from utils import SPECIES_LIST
 
 
-def create_images_labels_directories(images_train_dir, images_val_dir, labels_train_dir, labels_val_dir):
+def create_images_labels_directories(images_train_dir, images_val_dir, images_test_dir, labels_train_dir, labels_val_dir, labels_test_dir):
 
     os.makedirs(images_train_dir, exist_ok=True)
     os.makedirs(images_val_dir, exist_ok=True)
+    os.makedirs(images_test_dir, exist_ok=True)
     os.makedirs(labels_train_dir, exist_ok=True)
     os.makedirs(labels_val_dir, exist_ok=True)
+    os.makedirs(labels_test_dir, exist_ok=True)
 
 
 def create_bird_annotation(class_id, x1, y1, x2, y2, width, height):
@@ -87,19 +89,25 @@ def main():
 
     images_train_dir = os.path.join(args.o, "images/train")
     images_val_dir = os.path.join(args.o, "images/val")
+    images_test_dir = os.path.join(args.o, "images/test")
     labels_train_dir = os.path.join(args.o, "labels/train")
     labels_val_dir = os.path.join(args.o, "labels/val")
+    labels_test_dir = os.path.join(args.o, "labels/test")
 
-    # Split every frame on the video into train or validation folder to avoid the model to learn the video and just recognize from which video the frame is from
-    if random.random() < args.p:
+    # Split every frame on the video into train, validation, or test folder
+    probability = random.random()
+    if probability < args.p:
         image_dir = images_train_dir
         label_dir = labels_train_dir
-    else:
+    elif probability < args.p + (1 - args.p) / 2:
         image_dir = images_val_dir
         label_dir = labels_val_dir
+    else:
+        image_dir = images_test_dir
+        label_dir = labels_test_dir
 
     create_images_labels_directories(
-        images_train_dir, images_val_dir, labels_train_dir, labels_val_dir)
+        images_train_dir, images_val_dir, images_test_dir, labels_train_dir, labels_val_dir, labels_test_dir)
 
     frame_count = 0
 
@@ -108,6 +116,10 @@ def main():
 
         if not ret:
             break
+
+        # Only takes a third of the frames
+        if random.random() > 0.33:
+            continue
 
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
         detections = sv.Detections.from_ultralytics(result)

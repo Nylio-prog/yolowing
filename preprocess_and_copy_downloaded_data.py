@@ -24,7 +24,7 @@ def overwrite_classes_yaml(yaml_file, species_selected):
         yaml_data = f"path: {absolute_path}\n"
         yaml_data += f"train: images/train\n"
         yaml_data += f"val: images/val\n"
-        yaml_data += f"test: \n"
+        yaml_data += f"test: images/test\n"
         yaml_data += f"names:\n"
         for i, species in enumerate(species_selected):
             yaml_data += f"  {i}: {species}\n"
@@ -55,7 +55,7 @@ def overwrite_classes_utils(utils_file_path, species_selected):
 # Also need to regroup the other low occurences species into another one for negative sampling but will require to change the classes in birds.yaml and utils.py
 def read_species_data(input_file, yaml_file, utils_file):
     species_counts = {}  # Dictionary to store species counts
-    # Dictionary to store video_id as key and species as value for >= 300 occurrences
+    # Dictionary to store video_id as key and species as value for >= 200 occurrences
     species_dict = {}
     occurences_threshold = 300
 
@@ -66,8 +66,8 @@ def read_species_data(input_file, yaml_file, utils_file):
             video_id = row["video_id"]
             species = row["species"]
 
-            # We don't count 'NA' species
-            if species != 'NA':
+            # We don't count 'NA' species and Pas d'oiseau because we can't create box for them
+            if species != 'NA' and species != "Pas d'oiseau":
                 species_counts[species] = species_counts.get(species, 0) + 1
 
                 # Check if the species count is below the threshold
@@ -83,7 +83,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     #     count for count in species_counts.values() if count >= occurences_threshold
     # )
 
-    max_video_ids_per_species = 100
+    max_video_ids_per_species = 250
 
     print(
         f"Maximum amount of videos taken for each species : {max_video_ids_per_species}")
@@ -98,9 +98,9 @@ def read_species_data(input_file, yaml_file, utils_file):
                 video_ids_per_species[species] = 0
 
             # Calculate the probability of including this video based on the current count
-            # 10 times the probability to almost ensure that in total there will be max_video_ids_per_species
+            # 8 times the probability to almost ensure that in total there will be max_video_ids_per_species
             # but with better distribution
-            probability = 10 * max_video_ids_per_species / \
+            probability = 8 * max_video_ids_per_species / \
                 (species_counts[species] + 1)
 
             # Randomly decide whether to include this video based on probability

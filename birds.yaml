@@ -1,17 +1,16 @@
 path: C:\Users\Nils\Documents\PoidsPlume\created_dataset
 train: images/train
 val: images/val
-test: 
+test: images/test
 names:
-  0: Pas d'oiseau
-  1: Autre
-  2: Mésange bleue
-  3: Verdier d'Europe
-  4: Mésange charbonnière
-  5: Mésange noire
-  6: Chardonneret élégant
-  7: Mésange Nonnette
-  8: Rougegorge familier
-  9: Moineau friquet
-  10: Moineau domestique
-  11: Pinson du Nord
+  0: Autre
+  1: Mésange bleue
+  2: Verdier d'Europe
+  3: Mésange charbonnière
+  4: Mésange noire
+  5: Chardonneret élégant
+  6: Mésange Nonnette
+  7: Rougegorge familier
+  8: Moineau friquet
+  9: Moineau domestique
+  10: Pinson du Nord
