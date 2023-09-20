@@ -2,6 +2,7 @@ import os
 import shutil
 import argparse
 import csv
+import random
 
 
 def create_destination_folder(destination_folder):
@@ -23,7 +24,7 @@ def overwrite_classes_yaml(yaml_file, species_selected):
         yaml_data = f"path: {absolute_path}\n"
         yaml_data += f"train: images/train\n"
         yaml_data += f"val: images/val\n"
-        yaml_data += f"test: null\n"
+        yaml_data += f"test: \n"
         yaml_data += f"names:\n"
         for i, species in enumerate(species_selected):
             yaml_data += f"  {i}: {species}\n"
@@ -68,15 +69,21 @@ def read_species_data(input_file, yaml_file, utils_file):
             # We don't count 'NA' species
             if species != 'NA':
                 species_counts[species] = species_counts.get(species, 0) + 1
-                # Populate species_dict with video_id as key and species as value
-                species_dict[video_id] = species
+
+                # Check if the species count is below the threshold
+                if species_counts[species] < occurences_threshold:
+                    species_dict[video_id] = "Autre"
+                    species_counts["Autre"] = species_counts.get(
+                        "Autre", 0) + 1
+                else:
+                    species_dict[video_id] = species
 
     # Determine the maximum number of video_ids to keep for each species
     # max_video_ids_per_species = min(
     #     count for count in species_counts.values() if count >= occurences_threshold
     # )
 
-    max_video_ids_per_species = 50
+    max_video_ids_per_species = 100
 
     print(
         f"Maximum amount of videos taken for each species : {max_video_ids_per_species}")
@@ -89,7 +96,17 @@ def read_species_data(input_file, yaml_file, utils_file):
         if species_counts[species] >= occurences_threshold:
             if species not in video_ids_per_species:
                 video_ids_per_species[species] = 0
-            if video_ids_per_species[species] < max_video_ids_per_species:
+
+            # Calculate the probability of including this video based on the current count
+            # 10 times the probability to almost ensure that in total there will be max_video_ids_per_species
+            # but with better distribution
+            probability = 10 * max_video_ids_per_species / \
+                (species_counts[species] + 1)
+
+            # Randomly decide whether to include this video based on probability
+            include_video = random.random() < probability and \
+                video_ids_per_species[species] < max_video_ids_per_species
+            if include_video:
                 filtered_species_dict[video_id] = species
                 video_ids_per_species[species] += 1
 

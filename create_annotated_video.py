@@ -1,8 +1,6 @@
 import cv2
 import argparse
 import supervision as sv
-import torch
-import time
 import os
 import random
 
@@ -65,17 +63,6 @@ def main():
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
     args = parser.parse_args()
 
-    global_start_time = time.time()
-
-    # Check if CUDA (GPU support) is available
-    use_gpu = torch.cuda.is_available()
-
-    if use_gpu:
-        device_name = torch.cuda.get_device_name(0)
-        print(f"GPU Device: {device_name}")
-    else:
-        print("No GPU detected. Using CPU.")
-
     # Create VideoCapture objects for input and output videos
     cap = cv2.VideoCapture(args.i)
 
@@ -83,7 +70,17 @@ def main():
     image_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     image_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-    model = YOLO("yolov8l.pt")
+    model_downloaded = False
+
+    model_name = "yolov8l.pt"
+
+    if os.path.exists(model_name):
+        model_downloaded = True
+
+    model = YOLO(model_name)
+
+    if not (model_downloaded):
+        print("Model downloaded")
 
     for key in range(14, 25):
         model.names[key] = 'bird'
@@ -95,11 +92,9 @@ def main():
 
     # Split every frame on the video into train or validation folder to avoid the model to learn the video and just recognize from which video the frame is from
     if random.random() < args.p:
-        print("Will be in the train folder")
         image_dir = images_train_dir
         label_dir = labels_train_dir
     else:
-        print("Will be in the validation folder")
         image_dir = images_val_dir
         label_dir = labels_val_dir
 
@@ -114,7 +109,7 @@ def main():
         if not ret:
             break
 
-        result = model(frame, agnostic_nms=True, verbose=False)[0]
+        result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
         detections = sv.Detections.from_ultralytics(result)
         labels = [
             f"{model.model.names[class_id]}"
@@ -153,11 +148,6 @@ def main():
             frame_count += 1
 
     cap.release()
-    cv2.destroyAllWindows()
-
-    global_elapsed_time = time.time() - global_start_time
-    print(
-        f"The process of this video took {global_elapsed_time} seconds to execute")
 
 
 if __name__ == "__main__":
