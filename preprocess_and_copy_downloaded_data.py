@@ -52,7 +52,7 @@ def overwrite_classes_utils(utils_file_path, species_selected):
 
 # Need to improve by randomly taking the max_video_ids_per_species videos instead of sequentially do it
 # Also need to regroup the other low occurences species into another one for negative sampling but will require to change the classes in birds.yaml and utils.py
-def read_species_data(input_file, yaml_file, utils_file, destination_folder):
+def read_species_data(input_file, yaml_file, utils_file):
     species_counts = {}  # Dictionary to store species counts
     # Dictionary to store video_id as key and species as value for >= 300 occurrences
     species_dict = {}
@@ -112,7 +112,7 @@ def read_species_data(input_file, yaml_file, utils_file, destination_folder):
                 f"Species: {species}, Occurrences Selected: {selected_count}")
             species_selected.append(species)
 
-    overwrite_classes_yaml(yaml_file, species_selected, destination_folder)
+    overwrite_classes_yaml(yaml_file, species_selected)
     overwrite_classes_utils(utils_file, species_selected)
 
     return filtered_species_dict
