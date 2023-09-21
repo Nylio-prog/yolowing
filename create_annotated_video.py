@@ -102,6 +102,7 @@ def main():
     elif probability < args.p + (1 - args.p) / 2:
         image_dir = images_val_dir
         label_dir = labels_val_dir
+    # Would be nice to put all the videos of a feeder into test to see generalization capability
     else:
         image_dir = images_test_dir
         label_dir = labels_test_dir

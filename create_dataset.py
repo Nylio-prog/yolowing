@@ -1,7 +1,6 @@
 import argparse
 import os
 from tqdm import tqdm
-import csv
 import shutil
 import json
 

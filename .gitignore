@@ -14,3 +14,4 @@ dataset/
 preprocessed_videos/
 test.py
 filtered_species_dict.json
+best_weights/

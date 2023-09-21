@@ -26,7 +26,7 @@ def main():
                         help="Path to the input video file")
     parser.add_argument("-o", type=str, default="video_annotated.mp4",
                         help="Output video file name, will always be in output_files folder")
-    parser.add_argument("-m", type=str, default="best.pt",
+    parser.add_argument("-m", type=str, default="best_weights/best.pt",
                         help="Model to use")
     parser.add_argument("--not-show", action="store_true",
                         help="Show the annotation in not")
