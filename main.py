@@ -71,7 +71,7 @@ def main():
 
         # Visualize the results on the frame
         annotated_frame = result.plot(
-            pil=True, line_width=4, font_size=30)
+            pil=True, line_width=5, font_size=40)
 
         # Can't compute it for first frame
         if (prev_end_time > 0 and not (args.not_show)):

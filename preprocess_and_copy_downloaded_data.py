@@ -3,6 +3,7 @@ import shutil
 import argparse
 import csv
 import random
+import json
 
 
 def create_destination_folder(destination_folder):
@@ -59,6 +60,8 @@ def read_species_data(input_file, yaml_file, utils_file):
     species_dict = {}
     occurences_threshold = 300
 
+    print("Counting number of occurences for each species in the database file ...")
+
     # Count the occurrences of each species in the input file
     with open(input_file, mode="r", newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file, delimiter="\t")
@@ -69,6 +72,8 @@ def read_species_data(input_file, yaml_file, utils_file):
             # We don't count 'NA' species and Pas d'oiseau because we can't create a box for them
             if species != 'NA' and species != "Pas d'oiseau":
                 species_counts[species] = species_counts.get(species, 0) + 1
+
+    print("Creating species dictionary with balanced species")
 
     # Populate species_dict with video_id as key and species as value
     with open(input_file, mode="r", newline="", encoding="utf-8") as file:
@@ -91,7 +96,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     #     count for count in species_counts.values() if count >= occurences_threshold
     # )
 
-    max_video_ids_per_species = 200
+    max_video_ids_per_species = 150
 
     print(
         f"Maximum amount of videos taken for each species : {max_video_ids_per_species}")
@@ -139,6 +144,13 @@ def read_species_data(input_file, yaml_file, utils_file):
 
     overwrite_classes_yaml(yaml_file, species_selected)
     overwrite_classes_utils(utils_file, species_selected)
+
+    # Specify the file path where you want to save the dictionary
+    species_dict_path = 'filtered_species_dict.json'
+
+    # Serialize and save the dictionary to a JSON file
+    with open(species_dict_path, 'w', encoding="utf-8") as file:
+        json.dump(filtered_species_dict, file)
 
     return filtered_species_dict
 

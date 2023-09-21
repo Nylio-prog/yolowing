@@ -3,6 +3,7 @@ import os
 from tqdm import tqdm
 import csv
 import shutil
+import json
 
 
 def main():
@@ -28,8 +29,8 @@ def main():
                         default="preprocessed_videos", help="Input folder where preprocessed videos are contained")
     parser.add_argument("-o", type=str,
                         default="created_dataset", help="Output folder where frames will be stored")
-    parser.add_argument("--db-file", type=str,
-                        default="db_export.txt", help="Database to read from the species")
+    parser.add_argument("--json-file", type=str,
+                        default="filtered_species_dict.json", help="Json to read from the species, created by preprocess_and_copy_downloaded_data")
     parser.add_argument("-p",  type=float, default=0.8,
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
 
@@ -38,24 +39,14 @@ def main():
     list_videos_path = [os.path.join(args.i, filename)
                         for filename in os.listdir(args.i)]
 
-    # Define the input file name
-    input_file = args.db_file
+    print("Reading the json dictionary file ...")
 
-    # Create a dictionary to store the species data
+    # Initialize an empty dictionary
     species_dict = {}
 
-    print("Reading the database file ...")
-
-    # Read the data from the file
-    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter="\t")
-        for row in reader:
-            video_id = row["video_id"]
-            species = row["species"]
-
-            # We don't add to the dict if it's NA
-            if species != 'NA':
-                species_dict[video_id] = species
+    # Read data from the JSON file and store it in the dictionary
+    with open(args.json_file, 'r', encoding="utf-8") as file:
+        species_dict = json.load(file)
 
     print(f"{len(list_videos_path)} in total")
 
