@@ -49,6 +49,7 @@ def main():
         -s (str): Name of species to annotate for each boxes on every frames.
         -n (int): Number of the video (default=0).
         -p (float): Probability of being in the train folder (default=0.8).
+        -t (bool): If specified, the data will be in the test set.
     """
 
     # Parse command line arguments
@@ -63,6 +64,9 @@ def main():
                         help="Number of the video. Used to name the output")
     parser.add_argument("-p",  type=float, default=0.8,
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
+    parser.add_argument("-t", action="store_true", default=False,
+                        help="If specified, the data will be in the test set.")
+
     args = parser.parse_args()
 
     # Create VideoCapture objects for input and output videos
@@ -95,17 +99,17 @@ def main():
     labels_test_dir = os.path.join(args.o, "labels/test")
 
     # Split every frame on the video into train, validation, or test folder
-    probability = random.random()
-    if probability < args.p:
-        image_dir = images_train_dir
-        label_dir = labels_train_dir
-    elif probability < args.p + (1 - args.p) / 2:
-        image_dir = images_val_dir
-        label_dir = labels_val_dir
-    # Would be nice to put all the videos of a feeder into test to see generalization capability
-    else:
+    if (args.t):
         image_dir = images_test_dir
         label_dir = labels_test_dir
+    else:
+        probability = random.random()
+        if probability < args.p:
+            image_dir = images_train_dir
+            label_dir = labels_train_dir
+        else:
+            image_dir = images_val_dir
+            label_dir = labels_val_dir
 
     create_images_labels_directories(
         images_train_dir, images_val_dir, images_test_dir, labels_train_dir, labels_val_dir, labels_test_dir)

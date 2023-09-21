@@ -68,10 +68,14 @@ def main():
                 "-i", video_path,  # Video path
                 "-o", args.o,  # Output folder
                 # Actual species to annotate
-                "-s", f'"{species_dict[video_id]}"',
+                "-s", f'"{species_dict[video_id]["species"]}"',
                 "-n", str(number_video),  # Number of the video
-                "-p", str(args.p)  # Probability of being in the train set
+                "-p", str(args.p),  # Probability of being in the train set
             ]
+
+            # Conditionally add the -t argument if it's True
+            if species_dict[video_id]["test"] == "True":
+                script_command.extend(["-t"])
 
             # Execute the combined command using os.system
             full_command = " ".join(script_command)

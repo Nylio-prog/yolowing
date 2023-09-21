@@ -58,7 +58,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     species_counts = {}  # Dictionary to store species counts
     # Dictionary to store video_id as key and species as value for >= 300 occurrences
     species_dict = {}
-    occurences_threshold = 300
+    occurences_threshold = 200
 
     print("Counting number of occurences for each species in the database file ...")
 
@@ -81,22 +81,30 @@ def read_species_data(input_file, yaml_file, utils_file):
         for row in reader:
             video_id = row["video_id"]
             species = row["species"]
+            feeder = row["feeder"]
 
             # Check if the species count is below the threshold
             if species != 'NA' and species != "Pas d'oiseau":
                 if species_counts[species] < occurences_threshold:
-                    species_dict[video_id] = "Autre"
+                    species_dict[video_id] = {
+                        "species": "Autre", "test": "False"}
                     species_counts["Autre"] = species_counts.get(
                         "Autre", 0) + 1
                 else:
-                    species_dict[video_id] = species
+                    # Check if "feeder" is "poecile" and add "test" dimension accordingly
+                    if feeder == "poecile" or feeder == "fringilla":
+                        species_dict[video_id] = {
+                            "species": species, "test": "True"}
+                    else:
+                        species_dict[video_id] = {
+                            "species": species, "test": "False"}
 
     # Determine the maximum number of video_ids to keep for each species
     # max_video_ids_per_species = min(
     #     count for count in species_counts.values() if count >= occurences_threshold
     # )
 
-    max_video_ids_per_species = 150
+    max_video_ids_per_species = 200
 
     print(
         f"Maximum amount of videos taken for each species : {max_video_ids_per_species}")
@@ -104,24 +112,25 @@ def read_species_data(input_file, yaml_file, utils_file):
     filtered_species_dict = {}
     # Dictionary to keep track of the number of video_ids per species
     video_ids_per_species = {}
-    for video_id, species in species_dict.items():
-        if species_counts[species] >= occurences_threshold:
-            if species not in video_ids_per_species:
-                video_ids_per_species[species] = 0
+    for video_id, data in species_dict.items():
+        if species_counts[data["species"]] >= occurences_threshold:
+            if data["species"] not in video_ids_per_species:
+                video_ids_per_species[data["species"]] = 0
 
             # Calculate the probability of including this video based on the current count
             # 2 times the probability to almost ensure that in total there will be max_video_ids_per_species
             # but with better distribution
             probability = 2 * max_video_ids_per_species / \
-                (species_counts[species] + 1)
+                (species_counts[data["species"]] + 1)
 
             # Randomly decide whether to include this video based on probability
             include_video = random.random() < probability and \
-                video_ids_per_species[species] < max_video_ids_per_species
+                video_ids_per_species[data["species"]
+                                      ] < max_video_ids_per_species
             if include_video:
-
-                filtered_species_dict[video_id] = species
-                video_ids_per_species[species] += 1
+                filtered_species_dict[video_id] = {
+                    "species": data["species"], "test": data["test"]}
+                video_ids_per_species[data["species"]] += 1
 
     # Print information about the filtering process
     total_species = len(species_counts)
