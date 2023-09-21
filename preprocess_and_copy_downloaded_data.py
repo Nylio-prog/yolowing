@@ -91,7 +91,9 @@ def read_species_data(input_file, yaml_file, utils_file):
                     species_counts["Autre"] = species_counts.get(
                         "Autre", 0) + 1
                 else:
-                    # Check if "feeder" is "poecile" and add "test" dimension accordingly
+                    # TODO: Check smarter for which feeder to pick up from database statistics and specifically \
+                    # chose a balanced number for each class
+                    # Check if "feeder" is "poecile" or "fringilla" and add "test" dimension accordingly
                     if feeder == "poecile" or feeder == "fringilla":
                         species_dict[video_id] = {
                             "species": species, "test": "True"}

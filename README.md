@@ -29,5 +29,5 @@ python train_model.py
 To predict a video, do this after putting the weights best.pt from output_training into the working directory :
 
 ```
-python main.py -i path/to/video/file
+python main.py -i path/to/video/file -m path/to/best/pt
 ```
