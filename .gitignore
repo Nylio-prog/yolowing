@@ -13,5 +13,4 @@ yolov8n.pt
 dataset/
 preprocessed_videos/
 test.py
-best.pt
 filtered_species_dict.json
