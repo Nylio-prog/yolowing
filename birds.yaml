@@ -1,4 +1,4 @@
-path: C:\Users\Nils\Documents\PoidsPlume\created_dataset
+path: /home/poidsplume/yolowing/created_dataset
 train: images/train
 val: images/val
 test: images/test

@@ -91,6 +91,9 @@ def main():
                 print(
                     f"Error encountered while processing {video_path}. Skipping...")
 
+            if return_code == 2:
+                raise KeyboardInterrupt
+
         except KeyboardInterrupt:
             print("Process interrupted. Exiting...")
             break
