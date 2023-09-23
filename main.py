@@ -17,6 +17,7 @@ def main():
         -i (str): Path to the input video file.
         -o (str): Path to the output video file.
         --not-show (bool, optional): Show the annotation in real-time (default: False).
+        -save (bool): Save to a video file
         -fps (float, optional): Desired frames per second (FPS) for the output video (default: 25.0).
     """
 
@@ -28,7 +29,9 @@ def main():
                         help="Output video file name, will always be in output_files folder")
     parser.add_argument("-m", type=str, default="best_weights/best.pt",
                         help="Model to use")
-    parser.add_argument("--not-show", action="store_true",
+    parser.add_argument("--not-show", action="store_true", default=False,
+                        help="Show the annotation in not")
+    parser.add_argument("-save", action="store_true",
                         help="Show the annotation in not")
     parser.add_argument("-fps", type=float, default=25.0,
                         help="Desired fps for the output video")
@@ -50,9 +53,11 @@ def main():
 
     # Create VideoCapture objects for input and output videos
     cap = cv2.VideoCapture(args.i)
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    out = cv2.VideoWriter(args.o, fourcc, args.fps, (int(
-        cap.get(3)), int(cap.get(4))))  # cap.get(3) returns width
+
+    if (args.save):
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        out = cv2.VideoWriter(args.o, fourcc, args.fps, (int(
+            cap.get(3)), int(cap.get(4))))  # cap.get(3) returns width
 
     model = YOLO(args.m)
 
@@ -74,7 +79,7 @@ def main():
             pil=True, line_width=5, font_size=40)
 
         # Can't compute it for first frame
-        if (prev_end_time > 0 and not (args.not_show)):
+        if (prev_end_time > 0 and not (args.not_show) and not ((args.save))):
             # Calculate the FPS of frame - 1
             fps = 1.0 / elapsed_time
 
@@ -91,14 +96,16 @@ def main():
         if cv2.waitKey(30) == 27:
             break
 
-        # Write the frame with bounding boxes to the output video
-        out.write(annotated_frame)
+        if (args.save):
+            # Write the frame with bounding boxes to the output video
+            out.write(annotated_frame)
 
         prev_end_time = time.time()
         elapsed_time = prev_end_time - start_time
 
     cap.release()
-    out.release()
+    if (args.save):
+        out.release()
     cv2.destroyAllWindows()
 
     global_elapsed_time = time.time() - global_start_time

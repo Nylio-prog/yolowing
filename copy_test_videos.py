@@ -21,8 +21,8 @@ def copy_videos(source_folder, destination_folder, species_dict):
 
 
 def main():
-    source_folder = "path/to/source/folder"
-    destination_folder = "path/to/destination/folder"
+    source_folder = "videos"
+    destination_folder = "test_videos"
 
     # Read species_dict from a JSON file
     with open("filtered_species_dict.json", "r") as json_file:
