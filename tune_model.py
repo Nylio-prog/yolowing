@@ -15,7 +15,7 @@ def main():
     model = YOLO(args.m)
 
     # Start tuning hyperparameters for model training on the birds dataset
-    result_grid = model.tune(data='birds.yaml', epochs=10)
+    result_grid = model.tune(data='birds.yaml', epochs=1, iterations=10)
 
 
 if __name__ == "__main__":

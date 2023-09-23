@@ -1,0 +1,29 @@
+# 10/10 iterations complete ✅ (16179.65s)
+# Results saved to /home/poidsplume/yolowing/runs/detect/tune
+# Best fitness=0.9066 observed at iteration 3
+# Best fitness metrics are {'metrics/precision(B)': 0.92625, 'metrics/recall(B)': 0.91446, 'metrics/mAP50(B)': 0.95287, 'metrics/mAP50-95(B)': 0.90146, 'val/box_loss': 0.32521, 'val/cls_loss': 0.26625, 'val/dfl_loss': 0.57518, 'fitness': 0.9066}
+# Best fitness model is /home/poidsplume/yolowing/runs/detect/train3
+# Best fitness hyperparameters are printed below.
+
+lr0: 0.01043
+lrf: 0.01139
+momentum: 0.92051
+weight_decay: 0.00049
+warmup_epochs: 3.48651
+warmup_momentum: 0.85926
+box: 8.04121
+cls: 0.3863
+dfl: 1.01438
+hsv_h: 0.015
+hsv_s: 0.84128
+hsv_v: 0.25074
+degrees: 0.0
+translate: 0.12691
+scale: 0.42467
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.0
+copy_paste: 0.0

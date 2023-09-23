@@ -2,7 +2,7 @@ task: detect
 mode: train
 model: output_training/yolov8_birds3/weights/best.pt
 data: birds.yaml
-epochs: 100
+epochs: 1
 patience: 50
 batch: 16
 imgsz: 640
