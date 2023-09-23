@@ -13,7 +13,6 @@ yolov8n.pt
 dataset/
 preprocessed_videos/
 test.py
-filtered_species_dict.json
 best_weights/
 birds.yaml
 utils.py
