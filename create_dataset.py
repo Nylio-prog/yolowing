@@ -61,9 +61,6 @@ def main():
         try:
             video_id = os.path.splitext(os.path.basename(video_path))[0]
 
-            if species_dict[video_id]["test"] == "False":
-                continue
-
             # Define the arguments to pass
             script_command = [
                 "python",  # Command to run Python
