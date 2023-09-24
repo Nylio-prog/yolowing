@@ -88,9 +88,6 @@ def main():
     if not (model_downloaded):
         print("Model downloaded")
 
-    for key in range(14, 25):
-        model.names[key] = 'bird'
-
     images_train_dir = os.path.join(args.o, "images/train")
     images_val_dir = os.path.join(args.o, "images/val")
     images_test_dir = os.path.join(args.o, "images/test")
