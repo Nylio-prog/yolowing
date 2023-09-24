@@ -28,6 +28,13 @@ def main():
     with open("filtered_species_dict.json", "r") as json_file:
         species_dict = json.load(json_file)
 
+    # Delete the entire folder and its contents if it exists
+    if os.path.exists(destination_folder):
+        shutil.rmtree(destination_folder)
+        print(f"Deleted existing {destination_folder} folder")
+
+    os.makedirs(destination_folder, exist_ok=True)
+
     copy_videos(source_folder, destination_folder, species_dict)
 
 

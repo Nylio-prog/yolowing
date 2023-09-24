@@ -72,7 +72,7 @@ def main():
         if not ret:
             break
 
-        result = model(frame, agnostic_nms=True)[0]
+        result = model(frame, agnostic_nms=True, conf=0.5)[0]
 
         # Visualize the results on the frame
         annotated_frame = result.plot(
