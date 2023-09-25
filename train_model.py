@@ -29,11 +29,11 @@ def main():
                         help="Path to the data configuration file")
     parser.add_argument("-output", type=str, default="output_training",
                         help="Directory for saving training runs and results")
-    parser.add_argument("-imgsz", type=int, default=256,
+    parser.add_argument("-imgsz", type=int, default=640,
                         help="Input image size")
     parser.add_argument("-epochs", type=int, default=100,
                         help="Number of training epochs")
-    parser.add_argument("-batch", type=int, default=64,
+    parser.add_argument("-batch", type=int, default=16,
                         help="Batch size for training")
     parser.add_argument("-name", type=str, default="yolov8_birds",
                         help="Name for the folder containing the results of this train")
