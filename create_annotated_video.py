@@ -119,10 +119,6 @@ def main():
         if not ret:
             break
 
-        # Only takes a third of the frames
-        if random.random() > 0.33:
-            continue
-
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
         detections = sv.Detections.from_ultralytics(result)
         labels = [
