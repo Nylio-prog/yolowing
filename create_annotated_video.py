@@ -88,6 +88,9 @@ def main():
     if not (model_downloaded):
         print("Model downloaded")
 
+    for key in range(14, 25):
+        model.names[key] = 'bird'
+
     images_train_dir = os.path.join(args.o, "images/train")
     images_val_dir = os.path.join(args.o, "images/val")
     images_test_dir = os.path.join(args.o, "images/test")
@@ -118,6 +121,9 @@ def main():
 
         if not ret:
             break
+
+        if frame_count % 5 != 0:
+            continue
 
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
         detections = sv.Detections.from_ultralytics(result)

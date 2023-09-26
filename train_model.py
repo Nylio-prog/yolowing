@@ -24,14 +24,14 @@ def main():
     parser = argparse.ArgumentParser(
         description="Train a YOLOv8 model on a custom dataset of birds")
     parser.add_argument("-model", type=str,
-                        default="yolov8m.pt", help="Model to use. Comes from ultralytics")
+                        default="yolov8s.pt", help="Model to use. Comes from ultralytics")
     parser.add_argument("-data", type=str, default="birds.yaml",
                         help="Path to the data configuration file")
     parser.add_argument("-output", type=str, default="output_training",
                         help="Directory for saving training runs and results")
     parser.add_argument("-imgsz", type=int, default=640,
                         help="Input image size")
-    parser.add_argument("-epochs", type=int, default=100,
+    parser.add_argument("-epochs", type=int, default=15,
                         help="Number of training epochs")
     parser.add_argument("-batch", type=int, default=16,
                         help="Batch size for training")

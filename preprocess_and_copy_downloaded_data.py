@@ -120,7 +120,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     video_ids_per_species = {}
     # Dictionary for number of species by each feeder
     species_count_test = {}
-    max_count_species_test = 5
+    max_count_species_test = 15
     for video_id, data in species_dict.items():
         if species_counts[data["species"]] >= occurences_threshold:
             if data["species"] not in video_ids_per_species:
