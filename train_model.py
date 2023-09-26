@@ -24,7 +24,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Train a YOLOv8 model on a custom dataset of birds")
     parser.add_argument("-model", type=str,
-                        default="yolov8l.pt", help="Model to use. Comes from ultralytics")
+                        default="yolov8m.pt", help="Model to use. Comes from ultralytics")
     parser.add_argument("-data", type=str, default="birds.yaml",
                         help="Path to the data configuration file")
     parser.add_argument("-output", type=str, default="output_training",

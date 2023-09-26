@@ -62,7 +62,7 @@ def main():
                         help="Annotate every animal boxes with this parameter. Must be in the list of species")
     parser.add_argument("-n",  type=int, default=0,
                         help="Number of the video. Used to name the output")
-    parser.add_argument("-p",  type=float, default=0.9,
+    parser.add_argument("-p",  type=float, default=0.8,
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
     parser.add_argument("-t", action="store_true", default=False,
                         help="If specified, the data will be in the test set.")
@@ -78,7 +78,7 @@ def main():
 
     model_downloaded = False
 
-    model_name = "yolov8l.pt"
+    model_name = "yolov8m.pt"
 
     if os.path.exists(model_name):
         model_downloaded = True

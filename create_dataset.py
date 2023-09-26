@@ -30,7 +30,7 @@ def main():
                         default="created_dataset", help="Output folder where frames will be stored")
     parser.add_argument("--json-file", type=str,
                         default="filtered_species_dict.json", help="Json to read from the species, created by preprocess_and_copy_downloaded_data")
-    parser.add_argument("-p",  type=float, default=0.9,
+    parser.add_argument("-p",  type=float, default=0.8,
                         help="Probability of being in the train folder. 1-p probability of being in validation folder")
 
     args = parser.parse_args()
