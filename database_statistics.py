@@ -121,11 +121,27 @@ def main():
             else:
                 species_counts_by_species[species] = count
 
-    plt.bar(species_counts_by_species.keys(),
-            species_counts_by_species.values())
+    # Open a text file for writing
+    with open(os.path.join(output_folder, "species_occurrences.txt"), "w") as file:
+        # Write header
+        file.write("Species\tOccurrences\n")
+
+        # Write species and occurrences to the file
+        for species, count in species_counts_by_species.items():
+            file.write(f"{species}\t{count}\n")
+
+    # Filter species with occurrences <= 100
+    filtered_species_counts = {
+        species: count
+        for species, count in species_counts_by_species.items()
+        if count > 100
+    }
+
+    # Create the bar chart
+    plt.bar(filtered_species_counts.keys(), filtered_species_counts.values())
     plt.xlabel("Species")
     plt.ylabel("Occurrences")
-    plt.title("Species Occurrences")
+    plt.title("Species Occurrences (Occurrences > 100)")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
 
