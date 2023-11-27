@@ -17,7 +17,7 @@ Private dataset containing videos of birds.
 In our case, to see some statistics about our dataset, we can run :
 
 ```
-python database_statistics.py --db-file path/to/cvs/or/txt/file
+python database_statistics.py --db-file db_file.tsv > statistics/statistics_log.txt
 ```
 
 ### ENTIRE PROCEDURE
