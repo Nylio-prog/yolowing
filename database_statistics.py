@@ -53,7 +53,6 @@ def main():
     with open(input_file, mode="r", newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file, delimiter="\t")
         for row in reader:
-            video_id = row["video_id"]
             species = row["species"]
             # Assuming "feeder" is the column name in your CSV
             feeder = row["feeder"]

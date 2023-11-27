@@ -5,6 +5,7 @@ created_dataset/
 output_files/
 videos/
 db_export.txt
+db_file.tsv
 yolov8x.pt
 yolov8l.pt
 yolov8m.pt

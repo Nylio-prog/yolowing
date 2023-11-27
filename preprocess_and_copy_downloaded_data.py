@@ -52,13 +52,13 @@ def overwrite_classes_utils(utils_file_path, species_selected):
         print(f"Error while updating utils file: {str(e)}")
 
 
-# Need to improve by randomly taking the max_video_ids_per_species videos instead of sequentially do it
+# Need to improve by randomly taking the max_video_ids_per_species videos instead of sequentially doing it
 # Also need to regroup the other low occurences species into another one for negative sampling but will require to change the classes in birds.yaml and utils.py
 def read_species_data(input_file, yaml_file, utils_file):
     species_counts = {}  # Dictionary to store species counts
     # Dictionary to store video_id as key and species as value for >= 300 occurrences
     species_dict = {}
-    occurences_threshold = 200
+    occurences_threshold = 300
 
     print("Counting number of occurences for each species in the database file ...")
 

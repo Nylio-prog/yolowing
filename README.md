@@ -4,15 +4,21 @@ Install cuda 11.8 following this video :
 
 https://www.youtube.com/watch?v=r7Am-ZGMef8
 
+If you don't see your GPU used for training or inference after correctly installing cuda, it's likely that you didn't install the right cuda version with pytorch.
+
 ### PROCESS
 
 From COCO dataset, we use the pretrained model of YOLOv8 to detect the bounding box of the birds. However, since the camera doesn't always accurately the bird, the prediction sometimes predicts the wrong animal. Therefore, to create we can merge all animals classes into one called birds and using the manual annotation from Poids Plume, we can create a dataset with the right bounding boxes and the right bird species. We can then train the model on this dataset to accurately recognize boxes and also recognize the bird species.
 
-### USEFUL LINKS FOR DATASETS
+### DATASET
 
-https://www.kaggle.com/datasets/gpiosenka/birdies
+Private dataset containing videos of birds.
 
-https://snd.gu.se/en/catalogue/dataset/2021-316-1
+In our case, to see some statistics about our dataset, we can run :
+
+```
+python database_statistics.py --db-file path/to/cvs/or/txt/file
+```
 
 ### ENTIRE PROCEDURE
 
