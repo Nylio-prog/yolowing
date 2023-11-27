@@ -202,6 +202,7 @@ def copy_videos(source_folder, destination_folder, species_dict):
 
         full_mp4_video_path = os.path.join(source_folder, mp4_video_path)
         # Copy the file to the specified folder
+        os.makedirs(os.path.dirname(destination_path), exist_ok=True)
         shutil.copy2(full_mp4_video_path, destination_path)
 
         print(f"Copied: {full_mp4_video_path} -> {destination_path}")
