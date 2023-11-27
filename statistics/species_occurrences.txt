@@ -1,0 +1,220 @@
+Species	Occurrences
+Pas d'oiseau	28752
+Moineau friquet	942
+Mésange charbonnière	25668
+Rougegorge familier	10069
+Fauvette à tête noire	4
+Tourterelle turque	271
+Mésange bleue	14156
+Verdier d'Europe	7987
+Poule domestique	2
+Troglodyte mignon	2
+Moineau domestique	15132
+Moineau friquet, Moineau domestique	1
+Pigeon biset	361
+Pie bavarde	146
+Pinson des arbres	533
+Moineau domestique + Moineau friquet	1
+Choucas des Tours	1
+Choucas des tours	75
+Espèce inconnue	2
+Etourneau sansonnet	5
+Mésange bleue, rougegorge familier	6
+Moineau domestique, rougegorge familier	2
+Moineau domestique, Rougegorge familier	1
+Rougegorge familier, mésange bleue	12
+Geai des chênes	288
+Mésange nonnette	2568
+Ecureuil roux	377
+Mésange noire	2254
+Sittelle torchepot	1254
+Fauvette mélanocéphale	188
+ Fauvette mélanocéphale	19
+f	1
+rouge queue noir	3
+Rougequeue noir	35
+rougequeue noir	1
+Moineau domestique + moineau friquet	1
+Pic épeiche	826
+Chardonneret élégant	7428
+Chardonneret élégant, Verdier d'Europe	48
+Verdier d'Europe, Mésange charbonnière	10
+Verdier d'Europe, Pinson du Nord	5
+Mésange charbonnière, Mésange bleue	3
+Bouvreuil pivoine	274
+Pinson du Nord	3038
+Mésange charbonnière, Verdier d'Europe	10
+Merle noir	600
+Mésange noire, Mésange charbonnière	9
+Mésange charbonnière, Mésange noire	12
+Mésange bleue, Mésange charbonnière	10
+Moineau domestique, Chardonneret élégant	3
+Verdier d'Europe, Moineau domestique	4
+Mésange charbonnière, Chardonneret élégant	2
+Verdier d'Europe, Chardonneret élégant	53
+Verdier d'Europe, Mésange charbonnière, Verdier d'Europe	1
+Pinson du Nord, Mésange charbonnière	5
+Moineau domestique, Verdier d'Europe	3
+Verdier d'Europe, Mésange noire	1
+Pinson du Nord, Verdier d'Europe	1
+Pinson du Nord, Chardonneret élégant	2
+Mésange bleue, Moineau domestique	1
+Verdier d'Europe, Mésange bleue	6
+Moineau domestique, Pinson du Nord	1
+Mésange charbonnière, Moineau domestique	2
+Mésange bleue, Mésange bleue	1
+Pinson des arbres, Verdier d'Europe	2
+Pinson des arbres, Mésange charbonnière	1
+Grosbec casse-noyaux	157
+Ilan Kouchner	1
+Grosbec Casse-Noyaux	1
+Pinson du Nord,Chardonneret élégant	1
+Verdier d'Europe,Pinson du Nord	6
+Rougegorge familier,Mésange bleue	1
+Rougegorge familier, Mésange bleue	1
+Chardonneret élégant,Pinson du Nord	1
+Rougegorge familier, Mésange charbonnière	1
+Mésange charbonnière,Chardonneret élégant	1
+Verdier d'Europe,Rougegorge familier	1
+Mésange charbonnière,Mésange bleue	2
+Pinson du Nord,Verdier d'Europe	1
+Mésange noire,Mésange charbonnière	1
+Mésange charbonnière,Mésange noire	1
+Chardonneret élégant, verdier d'Europe, mésange bleue et pinson du Nord	1
+Mésange Noire, Mésange charbonnière	1
+Mésange huppée	164
+Mésange charbonnière, Mésange Noire	1
+Mésange charbonnière, Rougequeue noir	1
+Deux verdiers d'Europe	6
+Verdier d'Europe, Pinson des Arbres	1
+Mésange charbonnière, Pinson des arbres	1
+Mésange bleue, Verdier d'Europe	1
+Mésange Nonnette, Mésange bleue	1
+Verdier d'Europe, Mésange nonnette	1
+Pinson des arbres, Chardonneret élégant	1
+Chardonneret élégant, mésange bleue	8
+Tarin des aulnes	550
+Chardonneret élégant -2	48
+Chardonneret élégant, verdier d'Europe	68
+Tarin des Aulnes	449
+Verdier d'Europe, Tarin des Aulnes	3
+Tarin des Aulnes, Verdier d'Europe	7
+Chardonneret élégant, tarin des aulnes	3
+Mésange bleue, Tarin des Aulnes	1
+Chardonneret élégant, Mésange charbonnière	1
+?	1
+Tarin des Aulnes, Mésange charbonnière	1
+Chardonneret élégant, Tarin des aulnes	3
+Ver	1
+Tarin des Aulnes,Charconneret élégant,Mésange charbonnière	1
+Verdier d'Europe -2	18
+Mésange bleue, Mésange Nonnette	1
+Tarin des aulnes, Chardonneret élégant	1
+Mésange charbonnière, mésange noire	37
+mésange charbonnière, nonette, noire	1
+Mésange charbonnière, mésange nonette	3
+Mésange nonette, mésange bleue	1
+Mésange bleue, Pic épeiche	1
+2 mésanges charbonnières	1
+Mésange noire, mésange nonette	1
+Sitelle torchepot, Mésange charbonnière	1
+Mésange bleue, Mésange Charbonnière	1
+Mésange charbonnière, mésange bleue	76
+Mésange noire, mésange charbonnière	8
+Mésange charbonnière, Sitelle torchepot	1
+Mésange charbonnière, Pinson du Nord	4
+Pinson du Nord, Mésange noire, Mésange charbonnière, Pinson du Nord	1
+Mésange nonette, mésange noire	1
+Pinson du Nord, Sitelle torchepot	1
+Mésange nonette, Mésange charbonnière	2
+Mésange noire, Mésange bleue	2
+Sitelle torchepot, Mésange bleue	1
+Mésange bleue, Mésange noire	1
+Mésange nonette, Mésange charbonnière, Pinson du Nord	1
+Mésange charbonnière, Verdier d'Europe, Pinson du Nord	1
+Mésange Noire, Mésange Noire	1
+combien de g. ? la mouche	1
+Mésange à longue queue	2
+Accenteur mouchet	150
+pinson du nord	2
+Punaise des bois	1
+Poney Shetland	1
+Paillasson	1
+mésange bleue, mésange charbonnière	10
+mesange bleue, mesange charbonniere	1
+mésange charbonnière, moineau domestique	10
+mésangecharbonnière, mésange bleue	9
+moineau domestique, mésange charbonnière	8
+moineau domestique, mésange bleue	6
+mésange charbonnière, mésange bleue	3
+moineau domestique bourrain	1
+Huppe fasciée	1
+Perruche à collier	4
+Perruche	1
+Doigts sauvages	1
+Mésange bleue, mésange charbonnière	120
+Mésange bleue, chardonneret élégant	7
+Chardonneret élégant, mésange charbonnière	12
+Mésange charbonnière, chardonneret élégant	26
+Mésange huppée, mésange bleue	1
+Rougegorge familier, mésange charbonnière	26
+Rougegorge familier, chardonneret	3
+Rougegorge familier, verdier d'Europe	5
+Verdier d'Europe, rouge gorge familier	2
+Mésange bleue, verdier d'Europe	18
+Mésange charbonnière, verdier d'Europe	14
+Rougegorge familier, chardonneret élégant	1
+Mésange charbonnière,rougegorge familier	5
+Verdier d'Europe, mésange bleue	2
+Verdier d'Europe, chardonneret élégant	44
+Chardonneret élégant, rougegorge familier	4
+Tarin des Aulnes, chardonneret élégant	10
+Mésange charbonnière, tarin des aulnes	3
+Verdier d'Europe, mésange charbonnière	27
+Tarin des Aulnes, mésange bleue	5
+Tarin des Aulnes, mésange charbonnière	11
+Tarin des Aulnes, verdier	1
+Tarin des Aulnes, verdier d'Europe	14
+Chardonneret élégant, tarin des Aulnes	9
+Mésange bleue, tarin des Aulnes	1
+Tarin des Aulnes, Rougegorge familier	4
+Mésange bleue, mésange charbonnière,chardonneret élégant	1
+Verdier d'Europe, tarin des aulnes	7
+Mésange bleue, mésange charbonnière, verdier d'Europe	2
+Tarin des aulnes, Verdier d'Europe	1
+Mésange charbonnière, pinson des arbres	3
+Verdier d'Europe, pinson des arbres	3
+Pinson des arbres, verdier d'Europe	5
+Mésange charbonnière, bouvreuil pivoine	1
+Mésange bleue, mésange huppée	1
+Mésange Noire, mésange charbonnière	16
+Mésange Noire, mésange bleue	9
+Mésange nonnette, mésange noire	3
+Mésange huppé, mésange noire	1
+Mésange Noire, mésange nonnette	3
+Mésange charbonnière, mésange nonnette	3
+Mésange bleue, mésange noire	4
+Mésange noire mésange charbonnière	1
+Mésange nonnette, mésange noire, mésange charbonnière	1
+Mésange Noire, mésange huppée	2
+Mésange huppée, mésange noire	2
+Mésange charbonnière, geai des chênes	1
+Mésange bleue, mésange charbonnière, mésange nonnette	1
+Mésange Nonnette, mésange bleue	4
+Mésange nonnette, mésange huppée	1
+Pinson des arbres, verdier d'Europe, sitelle torchepot	1
+Mésange charbonnière, mésange huppée	2
+Mésange charbonnière, sitelle torchepot	1
+Pic épeiche, mésange charbonnière	1
+Chat à chasser ! Comment ?	1
+Bouvreuil pivoine, Bouvreuil pivoine	1
+mésange iroquois	7
+siskin	12
+verdier	2
+Linotte mélodieuse	50
+lnotte	1
+linptte	1
+Mesange bleue et charbonnière	1
+Sitelle torchepot	4
+gypaète barbu	1
+train des anules	1
