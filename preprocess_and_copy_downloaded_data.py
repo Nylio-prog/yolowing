@@ -120,7 +120,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     local_paths_per_species = {}
     # Dictionary for number of species by each feeder
     species_count_test = {}
-    max_count_species_test = 15
+    max_count_species_test = 30
     for local_path, data in species_dict.items():
         if species_counts[data["species"]] >= occurences_threshold:
             if data["species"] not in local_paths_per_species:
@@ -193,21 +193,17 @@ def read_species_data(input_file, yaml_file, utils_file):
 
 
 def copy_videos(source_folder, destination_folder, species_dict):
-    for root, _, files in os.walk(source_folder):
-        for filename in files:
-            if filename.endswith(".mp4"):
-                source_path = os.path.join(root, filename)
+    # Check if the video is in species_dict before copying
+    for video in species_dict.keys():
+        # In the db_file it's written .h264 instead of .mp4 as the actual filename
+        destination_path = os.path.join(
+            destination_folder, video.replace(".h264", ".mp4"))
 
-                # Check if the video is in species_dict before copying
-                # In the db_file it's written .h264 instead of .mp4 as in the filename, so to compare we need to change this
-                if source_path.replace(".mp4", ".h264") in species_dict:
-                    destination_path = os.path.join(
-                        destination_folder, source_path)
+        full_video_path = os.path.join(video, source_folder)
+        # Copy the file to the specified folder
+        shutil.copy2(full_video_path, destination_path)
 
-                    # Copy the file to the specified folder
-                    shutil.copy2(source_path, destination_path)
-
-                    print(f"Copied: {source_path} -> {destination_path}")
+        print(f"Copied: {full_video_path} -> {destination_path}")
 
 
 def reorganize_and_preprocess_videos(source_folder, destination_folder, input_file, yaml_file, utils_file):
