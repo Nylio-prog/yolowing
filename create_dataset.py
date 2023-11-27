@@ -63,6 +63,7 @@ def main():
         try:
             local_path = os.path.splitext(os.path.basename(video_path))
             print(local_path)
+            print(species_dict)
 
             # Define the arguments to pass
             script_command = [
