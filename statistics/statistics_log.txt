@@ -1,0 +1,1038 @@
+Basic Statistics:
+Total Feeder: 27
+Unique Species: 219
+Feeder: pyrrhula
+Total of Species Counted: 6212
+Species Names: Pas d'oiseau, Moineau friquet, Mésange charbonnière, Rougegorge familier, Fauvette à tête noire, Tourterelle turque, Mésange bleue, Verdier d'Europe, Poule domestique, Troglodyte mignon, Moineau domestique, Moineau friquet, Moineau domestique, Pigeon biset, Pie bavarde, Pinson des arbres, Moineau domestique + Moineau friquet
+
+Species Counts:
+Pas d'oiseau: 687
+Moineau friquet: 694
+Mésange charbonnière: 1481
+Rougegorge familier: 692
+Fauvette à tête noire: 1
+Tourterelle turque: 232
+Mésange bleue: 43
+Verdier d'Europe: 3
+Poule domestique: 2
+Troglodyte mignon: 1
+Moineau domestique: 1945
+Moineau friquet, Moineau domestique: 1
+Pigeon biset: 361
+Pie bavarde: 67
+Pinson des arbres: 1
+Moineau domestique + Moineau friquet: 1
+
+Feeder: passer
+Total of Species Counted: 33699
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Rougegorge familier, Moineau domestique, Choucas des Tours, Choucas des tours, Espèce inconnue, Etourneau sansonnet, Mésange bleue, rougegorge familier, Moineau domestique, rougegorge familier, Moineau domestique, Rougegorge familier, Rougegorge familier, mésange bleue, Geai des chênes
+
+Species Counts:
+Pas d'oiseau: 11416
+Mésange charbonnière: 2606
+Mésange bleue: 3090
+Rougegorge familier: 4804
+Moineau domestique: 11765
+Choucas des Tours: 1
+Choucas des tours: 3
+Espèce inconnue: 2
+Etourneau sansonnet: 2
+Mésange bleue, rougegorge familier: 1
+Moineau domestique, rougegorge familier: 2
+Moineau domestique, Rougegorge familier: 1
+Rougegorge familier, mésange bleue: 1
+Geai des chênes: 5
+
+Feeder: fringilla
+Total of Species Counted: 2022
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Mésange nonnette, Verdier d'Europe, Ecureuil roux, Mésange noire, Rougegorge familier, Sittelle torchepot, Fauvette mélanocéphale,  Fauvette mélanocéphale, f, rouge queue noir, Rougequeue noir, rougequeue noir, Moineau friquet, Moineau domestique, Moineau domestique + moineau friquet
+
+Species Counts:
+Pas d'oiseau: 223
+Mésange charbonnière: 938
+Mésange bleue: 390
+Mésange nonnette: 3
+Verdier d'Europe: 1
+Ecureuil roux: 1
+Mésange noire: 3
+Rougegorge familier: 2
+Sittelle torchepot: 1
+Fauvette mélanocéphale: 125
+ Fauvette mélanocéphale: 19
+f: 1
+rouge queue noir: 3
+Rougequeue noir: 34
+rougequeue noir: 1
+Moineau friquet: 247
+Moineau domestique: 29
+Moineau domestique + moineau friquet: 1
+
+Feeder: carduelis
+Total of Species Counted: 26304
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Verdier d'Europe, Moineau domestique, Mésange noire, Pic épeiche, Chardonneret élégant, Chardonneret élégant, Verdier d'Europe, Verdier d'Europe, Mésange charbonnière, Verdier d'Europe, Pinson du Nord, Mésange charbonnière, Mésange bleue, Mésange nonnette, Bouvreuil pivoine, Geai des chênes, Pinson du Nord, Mésange charbonnière, Verdier d'Europe, Merle noir, Mésange noire, Mésange charbonnière, Rougegorge familier, Mésange charbonnière, Mésange noire, Mésange bleue, Mésange charbonnière, Pinson des arbres, Moineau domestique, Chardonneret élégant, Verdier d'Europe, Moineau domestique, Mésange charbonnière, Chardonneret élégant, Verdier d'Europe, Chardonneret élégant, Verdier d'Europe, Mésange charbonnière, Verdier d'Europe, Pinson du Nord, Mésange charbonnière, Moineau domestique, Verdier d'Europe, Verdier d'Europe, Mésange noire, Pinson du Nord, Verdier d'Europe, Pinson du Nord, Chardonneret élégant, Mésange bleue, Moineau domestique, Verdier d'Europe, Mésange bleue, Moineau domestique, Pinson du Nord, Mésange charbonnière, Moineau domestique, Mésange bleue, Mésange bleue, Pinson des arbres, Verdier d'Europe, Pinson des arbres, Mésange charbonnière, Grosbec casse-noyaux, Ilan Kouchner, Grosbec Casse-Noyaux, Pinson du Nord,Chardonneret élégant, Verdier d'Europe,Pinson du Nord, Rougegorge familier,Mésange bleue, Rougegorge familier, Mésange bleue, Chardonneret élégant,Pinson du Nord, Rougegorge familier, Mésange charbonnière, Mésange charbonnière,Chardonneret élégant, Verdier d'Europe,Rougegorge familier, Mésange charbonnière,Mésange bleue, Pinson du Nord,Verdier d'Europe, Mésange noire,Mésange charbonnière, Mésange charbonnière,Mésange noire, Sittelle torchepot, Chardonneret élégant, verdier d'Europe, mésange bleue et pinson du Nord, Mésange Noire, Mésange charbonnière, Mésange huppée, Mésange charbonnière, Mésange Noire, Mésange charbonnière, Rougequeue noir, Deux verdiers d'Europe, Verdier d'Europe, Pinson des Arbres, Mésange charbonnière, Pinson des arbres, Mésange bleue, Verdier d'Europe, Mésange Nonnette, Mésange bleue, Verdier d'Europe, Mésange nonnette, Pinson des arbres, Chardonneret élégant, Chardonneret élégant, mésange bleue, Tarin des aulnes, Chardonneret élégant -2, Chardonneret élégant, verdier d'Europe, Tarin des Aulnes, Verdier d'Europe, Tarin des Aulnes, Tarin des Aulnes, Verdier d'Europe, Chardonneret élégant, tarin des aulnes, Mésange bleue, Tarin des Aulnes, Chardonneret élégant, Mésange charbonnière, ?, Tarin des Aulnes, Mésange charbonnière, Chardonneret élégant, Tarin des aulnes, Ver, Tarin des Aulnes,Charconneret élégant,Mésange charbonnière, Verdier d'Europe -2, Mésange bleue, Mésange Nonnette, Fauvette mélanocéphale, Tarin des aulnes, Chardonneret élégant, Mésange charbonnière, mésange noire, mésange charbonnière, nonette, noire, Mésange charbonnière, mésange nonette, Pie bavarde, Mésange nonette, mésange bleue, Mésange bleue, Pic épeiche, 2 mésanges charbonnières, Mésange noire, mésange nonette, Sitelle torchepot, Mésange charbonnière, Mésange bleue, Mésange Charbonnière, Mésange charbonnière, mésange bleue, Mésange noire, mésange charbonnière, Mésange charbonnière, Sitelle torchepot, Mésange charbonnière, Pinson du Nord, Pinson du Nord, Mésange noire, Mésange charbonnière, Pinson du Nord, Mésange nonette, mésange noire, Pinson du Nord, Sitelle torchepot, Mésange nonette, Mésange charbonnière, Mésange noire, Mésange bleue, Sitelle torchepot, Mésange bleue, Mésange bleue, Mésange noire, Mésange nonette, Mésange charbonnière, Pinson du Nord, Mésange charbonnière, Verdier d'Europe, Pinson du Nord, Mésange Noire, Mésange Noire
+
+Species Counts:
+Pas d'oiseau: 1227
+Mésange charbonnière: 5274
+Mésange bleue: 1566
+Verdier d'Europe: 5157
+Moineau domestique: 139
+Mésange noire: 1402
+Pic épeiche: 259
+Chardonneret élégant: 3912
+Chardonneret élégant, Verdier d'Europe: 48
+Verdier d'Europe, Mésange charbonnière: 10
+Verdier d'Europe, Pinson du Nord: 5
+Mésange charbonnière, Mésange bleue: 3
+Mésange nonnette: 1626
+Bouvreuil pivoine: 151
+Geai des chênes: 103
+Pinson du Nord: 2601
+Mésange charbonnière, Verdier d'Europe: 10
+Merle noir: 504
+Mésange noire, Mésange charbonnière: 9
+Rougegorge familier: 1221
+Mésange charbonnière, Mésange noire: 12
+Mésange bleue, Mésange charbonnière: 9
+Pinson des arbres: 221
+Moineau domestique, Chardonneret élégant: 3
+Verdier d'Europe, Moineau domestique: 4
+Mésange charbonnière, Chardonneret élégant: 2
+Verdier d'Europe, Chardonneret élégant: 53
+Verdier d'Europe, Mésange charbonnière, Verdier d'Europe: 1
+Pinson du Nord, Mésange charbonnière: 5
+Moineau domestique, Verdier d'Europe: 3
+Verdier d'Europe, Mésange noire: 1
+Pinson du Nord, Verdier d'Europe: 1
+Pinson du Nord, Chardonneret élégant: 2
+Mésange bleue, Moineau domestique: 1
+Verdier d'Europe, Mésange bleue: 6
+Moineau domestique, Pinson du Nord: 1
+Mésange charbonnière, Moineau domestique: 2
+Mésange bleue, Mésange bleue: 1
+Pinson des arbres, Verdier d'Europe: 2
+Pinson des arbres, Mésange charbonnière: 1
+Grosbec casse-noyaux: 57
+Ilan Kouchner: 1
+Grosbec Casse-Noyaux: 1
+Pinson du Nord,Chardonneret élégant: 1
+Verdier d'Europe,Pinson du Nord: 6
+Rougegorge familier,Mésange bleue: 1
+Rougegorge familier, Mésange bleue: 1
+Chardonneret élégant,Pinson du Nord: 1
+Rougegorge familier, Mésange charbonnière: 1
+Mésange charbonnière,Chardonneret élégant: 1
+Verdier d'Europe,Rougegorge familier: 1
+Mésange charbonnière,Mésange bleue: 2
+Pinson du Nord,Verdier d'Europe: 1
+Mésange noire,Mésange charbonnière: 1
+Mésange charbonnière,Mésange noire: 1
+Sittelle torchepot: 154
+Chardonneret élégant, verdier d'Europe, mésange bleue et pinson du Nord: 1
+Mésange Noire, Mésange charbonnière: 1
+Mésange huppée: 19
+Mésange charbonnière, Mésange Noire: 1
+Mésange charbonnière, Rougequeue noir: 1
+Deux verdiers d'Europe: 6
+Verdier d'Europe, Pinson des Arbres: 1
+Mésange charbonnière, Pinson des arbres: 1
+Mésange bleue, Verdier d'Europe: 1
+Mésange Nonnette, Mésange bleue: 1
+Verdier d'Europe, Mésange nonnette: 1
+Pinson des arbres, Chardonneret élégant: 1
+Chardonneret élégant, mésange bleue: 3
+Tarin des aulnes: 89
+Chardonneret élégant -2: 48
+Chardonneret élégant, verdier d'Europe: 17
+Tarin des Aulnes: 148
+Verdier d'Europe, Tarin des Aulnes: 3
+Tarin des Aulnes, Verdier d'Europe: 7
+Chardonneret élégant, tarin des aulnes: 3
+Mésange bleue, Tarin des Aulnes: 1
+Chardonneret élégant, Mésange charbonnière: 1
+?: 1
+Tarin des Aulnes, Mésange charbonnière: 1
+Chardonneret élégant, Tarin des aulnes: 3
+Ver: 1
+Tarin des Aulnes,Charconneret élégant,Mésange charbonnière: 1
+Verdier d'Europe -2: 18
+Mésange bleue, Mésange Nonnette: 1
+Fauvette mélanocéphale: 2
+Tarin des aulnes, Chardonneret élégant: 1
+Mésange charbonnière, mésange noire: 16
+mésange charbonnière, nonette, noire: 1
+Mésange charbonnière, mésange nonette: 3
+Pie bavarde: 77
+Mésange nonette, mésange bleue: 1
+Mésange bleue, Pic épeiche: 1
+2 mésanges charbonnières: 1
+Mésange noire, mésange nonette: 1
+Sitelle torchepot, Mésange charbonnière: 1
+Mésange bleue, Mésange Charbonnière: 1
+Mésange charbonnière, mésange bleue: 3
+Mésange noire, mésange charbonnière: 8
+Mésange charbonnière, Sitelle torchepot: 1
+Mésange charbonnière, Pinson du Nord: 4
+Pinson du Nord, Mésange noire, Mésange charbonnière, Pinson du Nord: 1
+Mésange nonette, mésange noire: 1
+Pinson du Nord, Sitelle torchepot: 1
+Mésange nonette, Mésange charbonnière: 2
+Mésange noire, Mésange bleue: 2
+Sitelle torchepot, Mésange bleue: 1
+Mésange bleue, Mésange noire: 1
+Mésange nonette, Mésange charbonnière, Pinson du Nord: 1
+Mésange charbonnière, Verdier d'Europe, Pinson du Nord: 1
+Mésange Noire, Mésange Noire: 1
+
+Feeder: poecile
+Total of Species Counted: 3684
+Species Names: Pas d'oiseau, Ecureuil roux, combien de g. ? la mouche, Tourterelle turque, Tarin des aulnes, Pic épeiche, Mésange bleue, Verdier d'Europe, Mésange charbonnière, Mésange noire, Chardonneret élégant, Mésange nonnette, Rougegorge familier, Sittelle torchepot, Mésange à longue queue, Accenteur mouchet, Mésange huppée, Moineau domestique, Pinson des arbres, Pinson du Nord, Geai des chênes, pinson du nord, Merle noir
+
+Species Counts:
+Pas d'oiseau: 579
+Ecureuil roux: 373
+combien de g. ? la mouche: 1
+Tourterelle turque: 38
+Tarin des aulnes: 70
+Pic épeiche: 93
+Mésange bleue: 544
+Verdier d'Europe: 5
+Mésange charbonnière: 841
+Mésange noire: 190
+Chardonneret élégant: 92
+Mésange nonnette: 38
+Rougegorge familier: 80
+Sittelle torchepot: 279
+Mésange à longue queue: 2
+Accenteur mouchet: 2
+Mésange huppée: 1
+Moineau domestique: 1
+Pinson des arbres: 121
+Pinson du Nord: 325
+Geai des chênes: 6
+pinson du nord: 2
+Merle noir: 1
+
+Feeder: saxicola
+Total of Species Counted: 1976
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Moineau domestique
+
+Species Counts:
+Pas d'oiseau: 1910
+Mésange charbonnière: 26
+Mésange bleue: 36
+Moineau domestique: 4
+
+Feeder: parus
+Total of Species Counted: 733
+Species Names: Mésange charbonnière, Mésange bleue, Pas d'oiseau, Rougegorge familier, Moineau domestique, Chardonneret élégant, Choucas des tours, Fauvette mélanocéphale, Merle noir
+
+Species Counts:
+Mésange charbonnière: 347
+Mésange bleue: 57
+Pas d'oiseau: 148
+Rougegorge familier: 6
+Moineau domestique: 22
+Chardonneret élégant: 19
+Choucas des tours: 72
+Fauvette mélanocéphale: 61
+Merle noir: 1
+
+Feeder: Rastatt
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: casmerodius
+Total of Species Counted: 7811
+Species Names: Pas d'oiseau, Mésange bleue, Mésange charbonnière, Punaise des bois, Poney Shetland, Paillasson, Rougegorge familier, Chardonneret élégant, mésange bleue, mésange charbonnière, mesange bleue, mesange charbonniere, Verdier d'Europe, Pinson des arbres, Moineau domestique, mésange charbonnière, moineau domestique, mésangecharbonnière, mésange bleue, moineau domestique, mésange charbonnière, moineau domestique, mésange bleue, mésange charbonnière, mésange bleue, Pinson du Nord, moineau domestique bourrain, Grosbec casse-noyaux, Moineau friquet
+
+Species Counts:
+Pas d'oiseau: 4900
+Mésange bleue: 434
+Mésange charbonnière: 1036
+Punaise des bois: 1
+Poney Shetland: 1
+Paillasson: 1
+Rougegorge familier: 143
+Chardonneret élégant: 167
+mésange bleue, mésange charbonnière: 10
+mesange bleue, mesange charbonniere: 1
+Verdier d'Europe: 3
+Pinson des arbres: 7
+Moineau domestique: 1029
+mésange charbonnière, moineau domestique: 10
+mésangecharbonnière, mésange bleue: 9
+moineau domestique, mésange charbonnière: 8
+moineau domestique, mésange bleue: 6
+mésange charbonnière, mésange bleue: 3
+Pinson du Nord: 38
+moineau domestique bourrain: 1
+Grosbec casse-noyaux: 2
+Moineau friquet: 1
+
+Feeder: certhia
+Total of Species Counted: 1268
+Species Names: Pas d'oiseau, Mésange bleue, Mésange charbonnière, Rougegorge familier, Mésange huppée, Huppe fasciée, Chardonneret élégant, Perruche à collier, Perruche, Tarin des aulnes, Grosbec casse-noyaux
+
+Species Counts:
+Pas d'oiseau: 151
+Mésange bleue: 187
+Mésange charbonnière: 705
+Rougegorge familier: 8
+Mésange huppée: 39
+Huppe fasciée: 1
+Chardonneret élégant: 170
+Perruche à collier: 4
+Perruche: 1
+Tarin des aulnes: 1
+Grosbec casse-noyaux: 1
+
+Feeder: sylvia
+Total of Species Counted: 282
+Species Names: Pas d'oiseau, Chardonneret élégant, Mésange bleue, Rougequeue noir, Mésange noire, Tarin des aulnes, Mésange charbonnière
+
+Species Counts:
+Pas d'oiseau: 208
+Chardonneret élégant: 60
+Mésange bleue: 6
+Rougequeue noir: 1
+Mésange noire: 1
+Tarin des aulnes: 5
+Mésange charbonnière: 1
+
+Feeder: upupa
+Total of Species Counted: 21255
+Species Names: Pas d'oiseau, Doigts sauvages, Mésange charbonnière, Mésange bleue, Mésange charbonnière, mésange bleue, Mésange bleue, mésange charbonnière, Chardonneret élégant, Verdier d'Europe, Mésange bleue, chardonneret élégant, Chardonneret élégant, mésange charbonnière, Mésange huppée, Mésange charbonnière, chardonneret élégant, Chardonneret élégant, mésange bleue, Rougegorge familier, Mésange huppée, mésange bleue, Rougegorge familier, mésange charbonnière, Mésange bleue, rougegorge familier, Rougegorge familier, chardonneret, Rougegorge familier, verdier d'Europe, Verdier d'Europe, rouge gorge familier, Mésange bleue, verdier d'Europe, Chardonneret élégant, verdier d'Europe, Grosbec casse-noyaux, Mésange charbonnière, verdier d'Europe, Rougegorge familier, chardonneret élégant, Mésange charbonnière,rougegorge familier, Rougegorge familier, mésange bleue, Verdier d'Europe, mésange bleue, Tarin des Aulnes, Verdier d'Europe, chardonneret élégant, Chardonneret élégant, rougegorge familier, Tarin des aulnes, Tarin des Aulnes, chardonneret élégant, Mésange charbonnière, tarin des aulnes, Verdier d'Europe, mésange charbonnière, Tarin des Aulnes, mésange bleue, Tarin des Aulnes, mésange charbonnière, Tarin des Aulnes, verdier, Tarin des Aulnes, verdier d'Europe, Chardonneret élégant, tarin des Aulnes, Mésange bleue, tarin des Aulnes, Tarin des Aulnes, Rougegorge familier, Bouvreuil pivoine, Mésange bleue, mésange charbonnière,chardonneret élégant, Verdier d'Europe, tarin des aulnes, Mésange bleue, mésange charbonnière, verdier d'Europe, Tarin des aulnes, Verdier d'Europe, Pinson des arbres, Mésange charbonnière, pinson des arbres, Verdier d'Europe, pinson des arbres, Pinson des arbres, verdier d'Europe, Mésange charbonnière, bouvreuil pivoine, Mésange noire, Mésange bleue, mésange huppée, Mésange charbonnière, mésange noire, Mésange Noire, mésange charbonnière, Mésange Noire, mésange bleue, Mésange nonnette, mésange noire, Mésange huppé, mésange noire, Mésange nonnette, Mésange Noire, mésange nonnette, Mésange charbonnière, mésange nonnette, Mésange bleue, mésange noire, Mésange noire mésange charbonnière, Mésange nonnette, mésange noire, mésange charbonnière, Mésange Noire, mésange huppée, Mésange huppée, mésange noire, Pic épeiche, Mésange charbonnière, geai des chênes, Geai des chênes, Mésange bleue, mésange charbonnière, mésange nonnette, Mésange Nonnette, mésange bleue, Sittelle torchepot, Mésange nonnette, mésange huppée, Pinson du Nord, Pinson des arbres, verdier d'Europe, sitelle torchepot, Mésange charbonnière, mésange huppée, Mésange charbonnière, sitelle torchepot, Merle noir, Pic épeiche, mésange charbonnière, Pie bavarde, Chat à chasser ! Comment ?, Bouvreuil pivoine, Bouvreuil pivoine
+
+Species Counts:
+Pas d'oiseau: 2798
+Doigts sauvages: 1
+Mésange charbonnière: 5638
+Mésange bleue: 2915
+Mésange charbonnière, mésange bleue: 73
+Mésange bleue, mésange charbonnière: 120
+Chardonneret élégant: 2875
+Verdier d'Europe: 2597
+Mésange bleue, chardonneret élégant: 7
+Chardonneret élégant, mésange charbonnière: 12
+Mésange huppée: 98
+Mésange charbonnière, chardonneret élégant: 26
+Chardonneret élégant, mésange bleue: 5
+Rougegorge familier: 1628
+Mésange huppée, mésange bleue: 1
+Rougegorge familier, mésange charbonnière: 26
+Mésange bleue, rougegorge familier: 5
+Rougegorge familier, chardonneret: 3
+Rougegorge familier, verdier d'Europe: 5
+Verdier d'Europe, rouge gorge familier: 2
+Mésange bleue, verdier d'Europe: 18
+Chardonneret élégant, verdier d'Europe: 51
+Grosbec casse-noyaux: 91
+Mésange charbonnière, verdier d'Europe: 14
+Rougegorge familier, chardonneret élégant: 1
+Mésange charbonnière,rougegorge familier: 5
+Rougegorge familier, mésange bleue: 11
+Verdier d'Europe, mésange bleue: 2
+Tarin des Aulnes: 301
+Verdier d'Europe, chardonneret élégant: 44
+Chardonneret élégant, rougegorge familier: 4
+Tarin des aulnes: 329
+Tarin des Aulnes, chardonneret élégant: 10
+Mésange charbonnière, tarin des aulnes: 3
+Verdier d'Europe, mésange charbonnière: 27
+Tarin des Aulnes, mésange bleue: 5
+Tarin des Aulnes, mésange charbonnière: 11
+Tarin des Aulnes, verdier: 1
+Tarin des Aulnes, verdier d'Europe: 14
+Chardonneret élégant, tarin des Aulnes: 9
+Mésange bleue, tarin des Aulnes: 1
+Tarin des Aulnes, Rougegorge familier: 4
+Bouvreuil pivoine: 123
+Mésange bleue, mésange charbonnière,chardonneret élégant: 1
+Verdier d'Europe, tarin des aulnes: 7
+Mésange bleue, mésange charbonnière, verdier d'Europe: 2
+Tarin des aulnes, Verdier d'Europe: 1
+Pinson des arbres: 147
+Mésange charbonnière, pinson des arbres: 3
+Verdier d'Europe, pinson des arbres: 3
+Pinson des arbres, verdier d'Europe: 5
+Mésange charbonnière, bouvreuil pivoine: 1
+Mésange noire: 490
+Mésange bleue, mésange huppée: 1
+Mésange charbonnière, mésange noire: 21
+Mésange Noire, mésange charbonnière: 16
+Mésange Noire, mésange bleue: 9
+Mésange nonnette, mésange noire: 3
+Mésange huppé, mésange noire: 1
+Mésange nonnette: 125
+Mésange Noire, mésange nonnette: 3
+Mésange charbonnière, mésange nonnette: 3
+Mésange bleue, mésange noire: 4
+Mésange noire mésange charbonnière: 1
+Mésange nonnette, mésange noire, mésange charbonnière: 1
+Mésange Noire, mésange huppée: 2
+Mésange huppée, mésange noire: 2
+Pic épeiche: 126
+Mésange charbonnière, geai des chênes: 1
+Geai des chênes: 10
+Mésange bleue, mésange charbonnière, mésange nonnette: 1
+Mésange Nonnette, mésange bleue: 4
+Sittelle torchepot: 196
+Mésange nonnette, mésange huppée: 1
+Pinson du Nord: 59
+Pinson des arbres, verdier d'Europe, sitelle torchepot: 1
+Mésange charbonnière, mésange huppée: 2
+Mésange charbonnière, sitelle torchepot: 1
+Merle noir: 83
+Pic épeiche, mésange charbonnière: 1
+Pie bavarde: 1
+Chat à chasser ! Comment ?: 1
+Bouvreuil pivoine, Bouvreuil pivoine: 1
+
+Feeder: bubo
+Total of Species Counted: 2280
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Rougegorge familier, Mésange nonnette, Mésange huppée, Sittelle torchepot, Mésange noire, mésange iroquois, Pinson des arbres, Geai des chênes, Tarin des aulnes, siskin, verdier, Linotte mélodieuse, lnotte, linptte, Verdier d'Europe
+
+Species Counts:
+Pas d'oiseau: 314
+Mésange charbonnière: 1036
+Mésange bleue: 414
+Rougegorge familier: 291
+Mésange nonnette: 56
+Mésange huppée: 7
+Sittelle torchepot: 50
+Mésange noire: 28
+mésange iroquois: 7
+Pinson des arbres: 1
+Geai des chênes: 2
+Tarin des aulnes: 6
+siskin: 12
+verdier: 2
+Linotte mélodieuse: 50
+lnotte: 1
+linptte: 1
+Verdier d'Europe: 2
+
+Feeder: prunella
+Total of Species Counted: 5117
+Species Names: Pas d'oiseau, Rougegorge familier, Mésange bleue, Mésange charbonnière, Verdier d'Europe, Sittelle torchepot, Moineau domestique, Accenteur mouchet, Troglodyte mignon, Tourterelle turque, Pie bavarde, Chardonneret élégant, Pinson des arbres, Mesange bleue et charbonnière, Geai des chênes, Etourneau sansonnet, Mésange bleue, Mésange charbonnière
+
+Species Counts:
+Pas d'oiseau: 164
+Rougegorge familier: 859
+Mésange bleue: 1912
+Mésange charbonnière: 1318
+Verdier d'Europe: 215
+Sittelle torchepot: 182
+Moineau domestique: 143
+Accenteur mouchet: 148
+Troglodyte mignon: 1
+Tourterelle turque: 1
+Pie bavarde: 1
+Chardonneret élégant: 131
+Pinson des arbres: 35
+Mesange bleue et charbonnière: 1
+Geai des chênes: 4
+Etourneau sansonnet: 1
+Mésange bleue, Mésange charbonnière: 1
+
+Feeder: cuculus
+Total of Species Counted: 654
+Species Names: Pas d'oiseau, Mésange charbonnière, Sittelle torchepot, Mésange bleue, Sitelle torchepot, Mésange nonnette, Merle noir, Grosbec casse-noyaux, Ecureuil roux, Rougegorge familier, Moineau domestique, Etourneau sansonnet
+
+Species Counts:
+Pas d'oiseau: 76
+Mésange charbonnière: 173
+Sittelle torchepot: 152
+Mésange bleue: 166
+Sitelle torchepot: 1
+Mésange nonnette: 1
+Merle noir: 10
+Grosbec casse-noyaux: 5
+Ecureuil roux: 3
+Rougegorge familier: 13
+Moineau domestique: 52
+Etourneau sansonnet: 2
+
+Feeder: luscinia
+Total of Species Counted: 59
+Species Names: Mésange charbonnière, Mésange bleue, Pas d'oiseau
+
+Species Counts:
+Mésange charbonnière: 41
+Mésange bleue: 6
+Pas d'oiseau: 12
+
+Feeder: ficedula
+Total of Species Counted: 1109
+Species Names: Pas d'oiseau, gypaète barbu, train des anules, Mésange charbonnière, Rougegorge familier, Mésange bleue, Sittelle torchepot
+
+Species Counts:
+Pas d'oiseau: 652
+gypaète barbu: 1
+train des anules: 1
+Mésange charbonnière: 30
+Rougegorge familier: 136
+Mésange bleue: 241
+Sittelle torchepot: 48
+
+Feeder: turdus
+Total of Species Counted: 1010
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Mésange nonnette, Chardonneret élégant, Rougegorge familier, Mésange noire
+
+Species Counts:
+Pas d'oiseau: 127
+Mésange charbonnière: 467
+Mésange bleue: 280
+Mésange nonnette: 26
+Chardonneret élégant: 2
+Rougegorge familier: 107
+Mésange noire: 1
+
+Feeder: passerina
+Total of Species Counted: 2294
+Species Names: Pas d'oiseau, Sittelle torchepot, Mésange charbonnière, Mésange bleue, Pic épeiche, Mésange nonnette, Sitelle torchepot, Geai des chênes, Rougegorge familier, Mésange noire, Grosbec casse-noyaux, Pinson du Nord, Tarin des aulnes
+
+Species Counts:
+Pas d'oiseau: 173
+Sittelle torchepot: 192
+Mésange charbonnière: 684
+Mésange bleue: 274
+Pic épeiche: 348
+Mésange nonnette: 221
+Sitelle torchepot: 3
+Geai des chênes: 158
+Rougegorge familier: 79
+Mésange noire: 112
+Grosbec casse-noyaux: 1
+Pinson du Nord: 15
+Tarin des aulnes: 34
+
+Feeder: lanius
+Total of Species Counted: 3412
+Species Names: Pas d'oiseau, Mésange charbonnière, Mésange bleue, Moineau domestique, Mésange noire, Fauvette à tête noire, Merle noir, Tarin des aulnes, Verdier d'Europe
+
+Species Counts:
+Pas d'oiseau: 453
+Mésange charbonnière: 2363
+Mésange bleue: 542
+Moineau domestique: 3
+Mésange noire: 27
+Fauvette à tête noire: 3
+Merle noir: 1
+Tarin des aulnes: 16
+Verdier d'Europe: 4
+
+Feeder: lullula
+Total of Species Counted: 4722
+Species Names: Pas d'oiseau, Mésange bleue, Mésange charbonnière, Mésange nonnette
+
+Species Counts:
+Pas d'oiseau: 2534
+Mésange bleue: 1053
+Mésange charbonnière: 663
+Mésange nonnette: 472
+
+Feeder: phylloscopus
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: gyps
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: hirundo
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: pica
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: psittacula
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+Feeder: tichodroma
+Total of Species Counted: 0
+Species Names: 
+
+Species Counts:
+
+
+Species Occurrences by Feeder:
+Feeder: pyrrhula
+Pas d'oiseau: 687 times
+Moineau friquet: 694 times
+Mésange charbonnière: 1481 times
+Rougegorge familier: 692 times
+Fauvette à tête noire: 1 times
+Tourterelle turque: 232 times
+Mésange bleue: 43 times
+Verdier d'Europe: 3 times
+Poule domestique: 2 times
+Troglodyte mignon: 1 times
+Moineau domestique: 1945 times
+Moineau friquet, Moineau domestique: 1 times
+Pigeon biset: 361 times
+Pie bavarde: 67 times
+Pinson des arbres: 1 times
+Moineau domestique + Moineau friquet: 1 times
+
+Feeder: passer
+Pas d'oiseau: 11416 times
+Mésange charbonnière: 2606 times
+Mésange bleue: 3090 times
+Rougegorge familier: 4804 times
+Moineau domestique: 11765 times
+Choucas des Tours: 1 times
+Choucas des tours: 3 times
+Espèce inconnue: 2 times
+Etourneau sansonnet: 2 times
+Mésange bleue, rougegorge familier: 1 times
+Moineau domestique, rougegorge familier: 2 times
+Moineau domestique, Rougegorge familier: 1 times
+Rougegorge familier, mésange bleue: 1 times
+Geai des chênes: 5 times
+
+Feeder: fringilla
+Pas d'oiseau: 223 times
+Mésange charbonnière: 938 times
+Mésange bleue: 390 times
+Mésange nonnette: 3 times
+Verdier d'Europe: 1 times
+Ecureuil roux: 1 times
+Mésange noire: 3 times
+Rougegorge familier: 2 times
+Sittelle torchepot: 1 times
+Fauvette mélanocéphale: 125 times
+ Fauvette mélanocéphale: 19 times
+f: 1 times
+rouge queue noir: 3 times
+Rougequeue noir: 34 times
+rougequeue noir: 1 times
+Moineau friquet: 247 times
+Moineau domestique: 29 times
+Moineau domestique + moineau friquet: 1 times
+
+Feeder: carduelis
+Pas d'oiseau: 1227 times
+Mésange charbonnière: 5274 times
+Mésange bleue: 1566 times
+Verdier d'Europe: 5157 times
+Moineau domestique: 139 times
+Mésange noire: 1402 times
+Pic épeiche: 259 times
+Chardonneret élégant: 3912 times
+Chardonneret élégant, Verdier d'Europe: 48 times
+Verdier d'Europe, Mésange charbonnière: 10 times
+Verdier d'Europe, Pinson du Nord: 5 times
+Mésange charbonnière, Mésange bleue: 3 times
+Mésange nonnette: 1626 times
+Bouvreuil pivoine: 151 times
+Geai des chênes: 103 times
+Pinson du Nord: 2601 times
+Mésange charbonnière, Verdier d'Europe: 10 times
+Merle noir: 504 times
+Mésange noire, Mésange charbonnière: 9 times
+Rougegorge familier: 1221 times
+Mésange charbonnière, Mésange noire: 12 times
+Mésange bleue, Mésange charbonnière: 9 times
+Pinson des arbres: 221 times
+Moineau domestique, Chardonneret élégant: 3 times
+Verdier d'Europe, Moineau domestique: 4 times
+Mésange charbonnière, Chardonneret élégant: 2 times
+Verdier d'Europe, Chardonneret élégant: 53 times
+Verdier d'Europe, Mésange charbonnière, Verdier d'Europe: 1 times
+Pinson du Nord, Mésange charbonnière: 5 times
+Moineau domestique, Verdier d'Europe: 3 times
+Verdier d'Europe, Mésange noire: 1 times
+Pinson du Nord, Verdier d'Europe: 1 times
+Pinson du Nord, Chardonneret élégant: 2 times
+Mésange bleue, Moineau domestique: 1 times
+Verdier d'Europe, Mésange bleue: 6 times
+Moineau domestique, Pinson du Nord: 1 times
+Mésange charbonnière, Moineau domestique: 2 times
+Mésange bleue, Mésange bleue: 1 times
+Pinson des arbres, Verdier d'Europe: 2 times
+Pinson des arbres, Mésange charbonnière: 1 times
+Grosbec casse-noyaux: 57 times
+Ilan Kouchner: 1 times
+Grosbec Casse-Noyaux: 1 times
+Pinson du Nord,Chardonneret élégant: 1 times
+Verdier d'Europe,Pinson du Nord: 6 times
+Rougegorge familier,Mésange bleue: 1 times
+Rougegorge familier, Mésange bleue: 1 times
+Chardonneret élégant,Pinson du Nord: 1 times
+Rougegorge familier, Mésange charbonnière: 1 times
+Mésange charbonnière,Chardonneret élégant: 1 times
+Verdier d'Europe,Rougegorge familier: 1 times
+Mésange charbonnière,Mésange bleue: 2 times
+Pinson du Nord,Verdier d'Europe: 1 times
+Mésange noire,Mésange charbonnière: 1 times
+Mésange charbonnière,Mésange noire: 1 times
+Sittelle torchepot: 154 times
+Chardonneret élégant, verdier d'Europe, mésange bleue et pinson du Nord: 1 times
+Mésange Noire, Mésange charbonnière: 1 times
+Mésange huppée: 19 times
+Mésange charbonnière, Mésange Noire: 1 times
+Mésange charbonnière, Rougequeue noir: 1 times
+Deux verdiers d'Europe: 6 times
+Verdier d'Europe, Pinson des Arbres: 1 times
+Mésange charbonnière, Pinson des arbres: 1 times
+Mésange bleue, Verdier d'Europe: 1 times
+Mésange Nonnette, Mésange bleue: 1 times
+Verdier d'Europe, Mésange nonnette: 1 times
+Pinson des arbres, Chardonneret élégant: 1 times
+Chardonneret élégant, mésange bleue: 3 times
+Tarin des aulnes: 89 times
+Chardonneret élégant -2: 48 times
+Chardonneret élégant, verdier d'Europe: 17 times
+Tarin des Aulnes: 148 times
+Verdier d'Europe, Tarin des Aulnes: 3 times
+Tarin des Aulnes, Verdier d'Europe: 7 times
+Chardonneret élégant, tarin des aulnes: 3 times
+Mésange bleue, Tarin des Aulnes: 1 times
+Chardonneret élégant, Mésange charbonnière: 1 times
+?: 1 times
+Tarin des Aulnes, Mésange charbonnière: 1 times
+Chardonneret élégant, Tarin des aulnes: 3 times
+Ver: 1 times
+Tarin des Aulnes,Charconneret élégant,Mésange charbonnière: 1 times
+Verdier d'Europe -2: 18 times
+Mésange bleue, Mésange Nonnette: 1 times
+Fauvette mélanocéphale: 2 times
+Tarin des aulnes, Chardonneret élégant: 1 times
+Mésange charbonnière, mésange noire: 16 times
+mésange charbonnière, nonette, noire: 1 times
+Mésange charbonnière, mésange nonette: 3 times
+Pie bavarde: 77 times
+Mésange nonette, mésange bleue: 1 times
+Mésange bleue, Pic épeiche: 1 times
+2 mésanges charbonnières: 1 times
+Mésange noire, mésange nonette: 1 times
+Sitelle torchepot, Mésange charbonnière: 1 times
+Mésange bleue, Mésange Charbonnière: 1 times
+Mésange charbonnière, mésange bleue: 3 times
+Mésange noire, mésange charbonnière: 8 times
+Mésange charbonnière, Sitelle torchepot: 1 times
+Mésange charbonnière, Pinson du Nord: 4 times
+Pinson du Nord, Mésange noire, Mésange charbonnière, Pinson du Nord: 1 times
+Mésange nonette, mésange noire: 1 times
+Pinson du Nord, Sitelle torchepot: 1 times
+Mésange nonette, Mésange charbonnière: 2 times
+Mésange noire, Mésange bleue: 2 times
+Sitelle torchepot, Mésange bleue: 1 times
+Mésange bleue, Mésange noire: 1 times
+Mésange nonette, Mésange charbonnière, Pinson du Nord: 1 times
+Mésange charbonnière, Verdier d'Europe, Pinson du Nord: 1 times
+Mésange Noire, Mésange Noire: 1 times
+
+Feeder: poecile
+Pas d'oiseau: 579 times
+Ecureuil roux: 373 times
+combien de g. ? la mouche: 1 times
+Tourterelle turque: 38 times
+Tarin des aulnes: 70 times
+Pic épeiche: 93 times
+Mésange bleue: 544 times
+Verdier d'Europe: 5 times
+Mésange charbonnière: 841 times
+Mésange noire: 190 times
+Chardonneret élégant: 92 times
+Mésange nonnette: 38 times
+Rougegorge familier: 80 times
+Sittelle torchepot: 279 times
+Mésange à longue queue: 2 times
+Accenteur mouchet: 2 times
+Mésange huppée: 1 times
+Moineau domestique: 1 times
+Pinson des arbres: 121 times
+Pinson du Nord: 325 times
+Geai des chênes: 6 times
+pinson du nord: 2 times
+Merle noir: 1 times
+
+Feeder: saxicola
+Pas d'oiseau: 1910 times
+Mésange charbonnière: 26 times
+Mésange bleue: 36 times
+Moineau domestique: 4 times
+
+Feeder: parus
+Mésange charbonnière: 347 times
+Mésange bleue: 57 times
+Pas d'oiseau: 148 times
+Rougegorge familier: 6 times
+Moineau domestique: 22 times
+Chardonneret élégant: 19 times
+Choucas des tours: 72 times
+Fauvette mélanocéphale: 61 times
+Merle noir: 1 times
+
+Feeder: Rastatt
+
+Feeder: casmerodius
+Pas d'oiseau: 4900 times
+Mésange bleue: 434 times
+Mésange charbonnière: 1036 times
+Punaise des bois: 1 times
+Poney Shetland: 1 times
+Paillasson: 1 times
+Rougegorge familier: 143 times
+Chardonneret élégant: 167 times
+mésange bleue, mésange charbonnière: 10 times
+mesange bleue, mesange charbonniere: 1 times
+Verdier d'Europe: 3 times
+Pinson des arbres: 7 times
+Moineau domestique: 1029 times
+mésange charbonnière, moineau domestique: 10 times
+mésangecharbonnière, mésange bleue: 9 times
+moineau domestique, mésange charbonnière: 8 times
+moineau domestique, mésange bleue: 6 times
+mésange charbonnière, mésange bleue: 3 times
+Pinson du Nord: 38 times
+moineau domestique bourrain: 1 times
+Grosbec casse-noyaux: 2 times
+Moineau friquet: 1 times
+
+Feeder: certhia
+Pas d'oiseau: 151 times
+Mésange bleue: 187 times
+Mésange charbonnière: 705 times
+Rougegorge familier: 8 times
+Mésange huppée: 39 times
+Huppe fasciée: 1 times
+Chardonneret élégant: 170 times
+Perruche à collier: 4 times
+Perruche: 1 times
+Tarin des aulnes: 1 times
+Grosbec casse-noyaux: 1 times
+
+Feeder: sylvia
+Pas d'oiseau: 208 times
+Chardonneret élégant: 60 times
+Mésange bleue: 6 times
+Rougequeue noir: 1 times
+Mésange noire: 1 times
+Tarin des aulnes: 5 times
+Mésange charbonnière: 1 times
+
+Feeder: upupa
+Pas d'oiseau: 2798 times
+Doigts sauvages: 1 times
+Mésange charbonnière: 5638 times
+Mésange bleue: 2915 times
+Mésange charbonnière, mésange bleue: 73 times
+Mésange bleue, mésange charbonnière: 120 times
+Chardonneret élégant: 2875 times
+Verdier d'Europe: 2597 times
+Mésange bleue, chardonneret élégant: 7 times
+Chardonneret élégant, mésange charbonnière: 12 times
+Mésange huppée: 98 times
+Mésange charbonnière, chardonneret élégant: 26 times
+Chardonneret élégant, mésange bleue: 5 times
+Rougegorge familier: 1628 times
+Mésange huppée, mésange bleue: 1 times
+Rougegorge familier, mésange charbonnière: 26 times
+Mésange bleue, rougegorge familier: 5 times
+Rougegorge familier, chardonneret: 3 times
+Rougegorge familier, verdier d'Europe: 5 times
+Verdier d'Europe, rouge gorge familier: 2 times
+Mésange bleue, verdier d'Europe: 18 times
+Chardonneret élégant, verdier d'Europe: 51 times
+Grosbec casse-noyaux: 91 times
+Mésange charbonnière, verdier d'Europe: 14 times
+Rougegorge familier, chardonneret élégant: 1 times
+Mésange charbonnière,rougegorge familier: 5 times
+Rougegorge familier, mésange bleue: 11 times
+Verdier d'Europe, mésange bleue: 2 times
+Tarin des Aulnes: 301 times
+Verdier d'Europe, chardonneret élégant: 44 times
+Chardonneret élégant, rougegorge familier: 4 times
+Tarin des aulnes: 329 times
+Tarin des Aulnes, chardonneret élégant: 10 times
+Mésange charbonnière, tarin des aulnes: 3 times
+Verdier d'Europe, mésange charbonnière: 27 times
+Tarin des Aulnes, mésange bleue: 5 times
+Tarin des Aulnes, mésange charbonnière: 11 times
+Tarin des Aulnes, verdier: 1 times
+Tarin des Aulnes, verdier d'Europe: 14 times
+Chardonneret élégant, tarin des Aulnes: 9 times
+Mésange bleue, tarin des Aulnes: 1 times
+Tarin des Aulnes, Rougegorge familier: 4 times
+Bouvreuil pivoine: 123 times
+Mésange bleue, mésange charbonnière,chardonneret élégant: 1 times
+Verdier d'Europe, tarin des aulnes: 7 times
+Mésange bleue, mésange charbonnière, verdier d'Europe: 2 times
+Tarin des aulnes, Verdier d'Europe: 1 times
+Pinson des arbres: 147 times
+Mésange charbonnière, pinson des arbres: 3 times
+Verdier d'Europe, pinson des arbres: 3 times
+Pinson des arbres, verdier d'Europe: 5 times
+Mésange charbonnière, bouvreuil pivoine: 1 times
+Mésange noire: 490 times
+Mésange bleue, mésange huppée: 1 times
+Mésange charbonnière, mésange noire: 21 times
+Mésange Noire, mésange charbonnière: 16 times
+Mésange Noire, mésange bleue: 9 times
+Mésange nonnette, mésange noire: 3 times
+Mésange huppé, mésange noire: 1 times
+Mésange nonnette: 125 times
+Mésange Noire, mésange nonnette: 3 times
+Mésange charbonnière, mésange nonnette: 3 times
+Mésange bleue, mésange noire: 4 times
+Mésange noire mésange charbonnière: 1 times
+Mésange nonnette, mésange noire, mésange charbonnière: 1 times
+Mésange Noire, mésange huppée: 2 times
+Mésange huppée, mésange noire: 2 times
+Pic épeiche: 126 times
+Mésange charbonnière, geai des chênes: 1 times
+Geai des chênes: 10 times
+Mésange bleue, mésange charbonnière, mésange nonnette: 1 times
+Mésange Nonnette, mésange bleue: 4 times
+Sittelle torchepot: 196 times
+Mésange nonnette, mésange huppée: 1 times
+Pinson du Nord: 59 times
+Pinson des arbres, verdier d'Europe, sitelle torchepot: 1 times
+Mésange charbonnière, mésange huppée: 2 times
+Mésange charbonnière, sitelle torchepot: 1 times
+Merle noir: 83 times
+Pic épeiche, mésange charbonnière: 1 times
+Pie bavarde: 1 times
+Chat à chasser ! Comment ?: 1 times
+Bouvreuil pivoine, Bouvreuil pivoine: 1 times
+
+Feeder: bubo
+Pas d'oiseau: 314 times
+Mésange charbonnière: 1036 times
+Mésange bleue: 414 times
+Rougegorge familier: 291 times
+Mésange nonnette: 56 times
+Mésange huppée: 7 times
+Sittelle torchepot: 50 times
+Mésange noire: 28 times
+mésange iroquois: 7 times
+Pinson des arbres: 1 times
+Geai des chênes: 2 times
+Tarin des aulnes: 6 times
+siskin: 12 times
+verdier: 2 times
+Linotte mélodieuse: 50 times
+lnotte: 1 times
+linptte: 1 times
+Verdier d'Europe: 2 times
+
+Feeder: prunella
+Pas d'oiseau: 164 times
+Rougegorge familier: 859 times
+Mésange bleue: 1912 times
+Mésange charbonnière: 1318 times
+Verdier d'Europe: 215 times
+Sittelle torchepot: 182 times
+Moineau domestique: 143 times
+Accenteur mouchet: 148 times
+Troglodyte mignon: 1 times
+Tourterelle turque: 1 times
+Pie bavarde: 1 times
+Chardonneret élégant: 131 times
+Pinson des arbres: 35 times
+Mesange bleue et charbonnière: 1 times
+Geai des chênes: 4 times
+Etourneau sansonnet: 1 times
+Mésange bleue, Mésange charbonnière: 1 times
+
+Feeder: cuculus
+Pas d'oiseau: 76 times
+Mésange charbonnière: 173 times
+Sittelle torchepot: 152 times
+Mésange bleue: 166 times
+Sitelle torchepot: 1 times
+Mésange nonnette: 1 times
+Merle noir: 10 times
+Grosbec casse-noyaux: 5 times
+Ecureuil roux: 3 times
+Rougegorge familier: 13 times
+Moineau domestique: 52 times
+Etourneau sansonnet: 2 times
+
+Feeder: luscinia
+Mésange charbonnière: 41 times
+Mésange bleue: 6 times
+Pas d'oiseau: 12 times
+
+Feeder: ficedula
+Pas d'oiseau: 652 times
+gypaète barbu: 1 times
+train des anules: 1 times
+Mésange charbonnière: 30 times
+Rougegorge familier: 136 times
+Mésange bleue: 241 times
+Sittelle torchepot: 48 times
+
+Feeder: turdus
+Pas d'oiseau: 127 times
+Mésange charbonnière: 467 times
+Mésange bleue: 280 times
+Mésange nonnette: 26 times
+Chardonneret élégant: 2 times
+Rougegorge familier: 107 times
+Mésange noire: 1 times
+
+Feeder: passerina
+Pas d'oiseau: 173 times
+Sittelle torchepot: 192 times
+Mésange charbonnière: 684 times
+Mésange bleue: 274 times
+Pic épeiche: 348 times
+Mésange nonnette: 221 times
+Sitelle torchepot: 3 times
+Geai des chênes: 158 times
+Rougegorge familier: 79 times
+Mésange noire: 112 times
+Grosbec casse-noyaux: 1 times
+Pinson du Nord: 15 times
+Tarin des aulnes: 34 times
+
+Feeder: lanius
+Pas d'oiseau: 453 times
+Mésange charbonnière: 2363 times
+Mésange bleue: 542 times
+Moineau domestique: 3 times
+Mésange noire: 27 times
+Fauvette à tête noire: 3 times
+Merle noir: 1 times
+Tarin des aulnes: 16 times
+Verdier d'Europe: 4 times
+
+Feeder: lullula
+Pas d'oiseau: 2534 times
+Mésange bleue: 1053 times
+Mésange charbonnière: 663 times
+Mésange nonnette: 472 times
+
+Feeder: phylloscopus
+
+Feeder: gyps
+
+Feeder: hirundo
+
+Feeder: pica
+
+Feeder: psittacula
+
+Feeder: tichodroma
+
+Feeder with the most species and lowest counts: fringilla
