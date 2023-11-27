@@ -59,15 +59,12 @@ def main():
 
     # Iterate over list_videos_path
     for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
-        print(video_path)
         try:
             # We don't need the name of the folder where videos are stored,
             # we need to join the strings since it'll give a list,
             # we also need to change the extension since the db file is with h264
             local_path = "/".join(video_path.split("/")
                                   [1:]).replace(".mp4", ".h264")
-            print(local_path)
-            print(species_dict)
 
             # Define the arguments to pass
             script_command = [
