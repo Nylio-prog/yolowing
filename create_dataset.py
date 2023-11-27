@@ -58,6 +58,7 @@ def main():
 
     # Iterate over list_videos_path
     for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
+        print(video_path)
         try:
             video_id = os.path.splitext(os.path.basename(video_path))[0]
 
