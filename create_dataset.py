@@ -61,8 +61,8 @@ def main():
     for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
         print(video_path)
         try:
-            # We don't need the name of the folder where videos are stored
-            local_path = video_path.split('/')[1:]
+            # We don't need the name of the folder where videos are stored, we need to join the strings since it'll give a list
+            local_path = "/".join(video_path.split("/")[1:])
             print(local_path)
             print(species_dict)
 
