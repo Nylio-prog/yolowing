@@ -199,7 +199,7 @@ def copy_videos(source_folder, destination_folder, species_dict):
         destination_path = os.path.join(
             destination_folder, video.replace(".h264", ".mp4"))
 
-        full_video_path = os.path.join(video, source_folder)
+        full_video_path = os.path.join(source_folder, video)
         # Copy the file to the specified folder
         shutil.copy2(full_video_path, destination_path)
 
