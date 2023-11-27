@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Process a file and create a species dictionary.")
     parser.add_argument("--db-file", type=str,
-                        default="db_export.txt", help="Input file name")
+                        default="db_file.tsv", help="Input file name")
     parser.add_argument("--output-folder", type=str,
                         default="statistics", help="Output folder for graphs")
 
