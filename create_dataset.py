@@ -62,7 +62,7 @@ def main():
         print(video_path)
         try:
             # We don't need the name of the folder where videos are stored
-            local_path = video_path.split('\\')[1]
+            local_path = video_path.split('/')[1:]
             print(local_path)
             print(species_dict)
 
