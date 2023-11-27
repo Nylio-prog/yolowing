@@ -35,8 +35,9 @@ def main():
 
     args = parser.parse_args()
 
-    list_videos_path = [os.path.join(args.i, filename)
-                        for filename in os.listdir(args.i)]
+    list_videos_path = [os.path.join(root, filename)
+                        for root, _, files in os.walk(args.i)
+                        for filename in files if filename.endswith(".mp4")]
 
     print("Reading the json dictionary file ...")
 
@@ -60,7 +61,8 @@ def main():
     for number_video, video_path in tqdm(enumerate(list_videos_path), total=len(list_videos_path)):
         print(video_path)
         try:
-            video_id = os.path.splitext(os.path.basename(video_path))[0]
+            local_path = os.path.splitext(os.path.basename(video_path))
+            print(local_path)
 
             # Define the arguments to pass
             script_command = [
@@ -69,13 +71,13 @@ def main():
                 "-i", video_path,  # Video path
                 "-o", args.o,  # Output folder
                 # Actual species to annotate
-                "-s", f'"{species_dict[video_id]["species"]}"',
+                "-s", f'"{species_dict[local_path]["species"]}"',
                 "-n", str(number_video),  # Number of the video
                 "-p", str(args.p),  # Probability of being in the train set
             ]
 
             # Conditionally add the -t argument if it's True
-            if species_dict[video_id]["test"] == "True":
+            if species_dict[local_path]["test"] == "True":
                 script_command.extend(["-t"])
 
             # Execute the combined command using os.system
