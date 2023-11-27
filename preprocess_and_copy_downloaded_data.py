@@ -196,14 +196,15 @@ def copy_videos(source_folder, destination_folder, species_dict):
     # Check if the video is in species_dict before copying
     for video in species_dict.keys():
         # In the db_file it's written .h264 instead of .mp4 as the actual filename
+        mp4_video_path = video.replace(".h264", ".mp4")
         destination_path = os.path.join(
-            destination_folder, video.replace(".h264", ".mp4"))
+            destination_folder, mp4_video_path)
 
-        full_video_path = os.path.join(source_folder, video)
+        full_mp4_video_path = os.path.join(source_folder, mp4_video_path)
         # Copy the file to the specified folder
-        shutil.copy2(full_video_path, destination_path)
+        shutil.copy2(full_mp4_video_path, destination_path)
 
-        print(f"Copied: {full_video_path} -> {destination_path}")
+        print(f"Copied: {full_mp4_video_path} -> {destination_path}")
 
 
 def reorganize_and_preprocess_videos(source_folder, destination_folder, input_file, yaml_file, utils_file):
