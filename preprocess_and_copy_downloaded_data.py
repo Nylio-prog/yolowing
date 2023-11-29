@@ -2,8 +2,9 @@ import os
 import shutil
 import argparse
 import csv
-import random
+import numpy as np
 import json
+from collections import defaultdict
 
 
 def create_destination_folder(destination_folder):
@@ -52,144 +53,150 @@ def overwrite_classes_utils(utils_file_path, species_selected):
         print(f"Error while updating utils file: {str(e)}")
 
 
-# Need to improve by randomly taking the max_local_paths_per_species videos instead of sequentially doing it
-# Also need to regroup the other low occurences species into another one for negative sampling but will require to change the classes in birds.yaml and utils.py
-def read_species_data(input_file, yaml_file, utils_file):
-    species_counts = {}  # Dictionary to store species counts
-    # Dictionary to store local_path as key and species as value for >= 300 occurrences
+def count_species_occurrences(input_file, occurences_threshold):
+    species_counts = defaultdict(int)
+
+    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file, delimiter="\t")
+        all_rows = list(reader)
+
+    for row in all_rows:
+        species = row["species"]
+        if species != 'NA' and species != "Pas d'oiseau":
+            species_counts[species] += 1
+
+    # Check and modify species below the occurrences_threshold to "Autre"
+    for species, count in species_counts.items():
+        if count < occurences_threshold:
+            species_counts[species] = 0
+            species_counts["Autre"] += count
+
+    return species_counts
+
+
+def get_unique_years(input_file):
+    unique_years = set()
+
+    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file, delimiter="\t")
+        for row in reader:
+            year = int(row["date"].split("-")[0])
+            unique_years.add(year)
+
+    return sorted(list(unique_years))
+
+
+def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species):
     species_dict = {}
-    occurences_threshold = 200
-
-    print("Counting number of occurences for each species in the database file ...")
-
-    # Count the occurrences of each species in the input file
-    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter="\t")
-        for row in reader:
-            local_path = row["local_path"]
-            species = row["species"]
-
-            # We don't count 'NA' species and Pas d'oiseau because we can't create a box for them
-            if species != 'NA' and species != "Pas d'oiseau":
-                species_counts[species] = species_counts.get(species, 0) + 1
-
-    print("Creating species dictionary with balanced species")
-
-    # Populate species_dict with local_path as key and species as value
-    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter="\t")
-        for row in reader:
-            local_path = row["local_path"]
-            species = row["species"]
-            year = row["date"].split("-")[0]
-
-            # Check if the species count is below the threshold
-            if species != 'NA' and species != "Pas d'oiseau":
-                if species_counts[species] < occurences_threshold:
-                    if year == "2021":
-                        species_dict[local_path] = {
-                            "species": "Autre", "test": "True"}
-                    else:
-                        species_dict[local_path] = {
-                            "species": "Autre", "test": "False"}
-                    species_counts["Autre"] = species_counts.get(
-                        "Autre", 0) + 1
-                else:
-                    # TODO: Check smarter for which feeder to pick up from database statistics and specifically \
-                    # chose a balanced number for each class
-                    # Check if "feeder" is "poecile" or "fringilla" and add "test" dimension accordingly
-                    if year == "2021":
-                        species_dict[local_path] = {
-                            "species": species, "test": "True"}
-                    else:
-                        species_dict[local_path] = {
-                            "species": species, "test": "False"}
-
-    # Determine the maximum number of local_paths to keep for each species
-    # max_local_paths_per_species = min(
-    #     count for count in species_counts.values() if count >= occurences_threshold
-    # )
-
-    max_local_paths_per_species = 200
-
-    print(
-        f"Maximum amount of videos taken for each species : {max_local_paths_per_species}")
-    # Filter species_dict based on species counts and limit to max_local_paths_per_species
-    filtered_species_dict = {}
-    # Dictionary to keep track of the number of local_paths per species, doesn't include test videos
-    local_paths_per_species = {}
-    # Dictionary for number of species by each feeder
-    species_count_test = {}
+    local_paths_per_species = defaultdict(int)
+    species_count_test = defaultdict(int)
+    max_local_paths_per_species_per_year = 100
     max_count_species_test = 30
-    for local_path, data in species_dict.items():
-        if species_counts[data["species"]] >= occurences_threshold:
-            if data["species"] not in local_paths_per_species:
-                local_paths_per_species[data["species"]] = 0
 
-            # If it's a test video, doesn't go through random process and we want to put max_count_species_test videos max
-            if data["test"] == "True":
-                if data["species"] in species_count_test:
-                    if species_count_test[data["species"]] < max_count_species_test:
-                        species_count_test[data["species"]] += 1
-                        filtered_species_dict[local_path] = {
-                            "species": data["species"], "test": data["test"]}
-                else:
-                    # If "species" key doesn't exist, set it to 1
-                    species_count_test[data["species"]] = 1
-                    filtered_species_dict[local_path] = {
-                        "species": data["species"], "test": data["test"]}
+    # Read all rows from the input file
+    with open(input_file, mode="r", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file, delimiter="\t")
+        all_rows = list(reader)
 
+    # Create a dictionary to store all rows for each species
+    rows_per_species = defaultdict(list)
+    for row in all_rows:
+        species = row["species"]
+        if species_counts[species] >= occurences_threshold or species == "Autre":
+            rows_per_species[species].append(row)
+
+    # Get unique years from the database
+    years = get_unique_years(input_file)
+
+    # Calculate evenly spaced indices for local paths for each species and each year
+    for species, rows in rows_per_species.items():
+        for year in years:
+            year_rows = [
+                row for row in rows if row["date"].split("-")[0] == year]
+            total_species_occurrences_per_year = len(year_rows)
+
+            # Determine the appropriate max value based on the year
+            if year == "2021":
+                max_value = max_count_species_test
             else:
-                # Calculate the probability of including this video based on the current count
-                # 2 times the probability to almost ensure that in total there will be max_local_paths_per_species
-                # but with better distribution
-                probability = 2 * max_local_paths_per_species / \
-                    (species_counts[data["species"]] + 1)
+                max_value = max_local_paths_per_species_per_year
 
-                # Randomly decide whether to include this video based on probability
-                include_video = random.random() < probability and \
-                    local_paths_per_species[data["species"]
-                                            ] < max_local_paths_per_species
-                if include_video:
-                    filtered_species_dict[local_path] = {
-                        "species": data["species"], "test": data["test"]}
-                    local_paths_per_species[data["species"]] += 1
+            # Calculate evenly spaced indices based on the determined max value
+            evenly_spaced_indices = np.linspace(
+                0, total_species_occurrences_per_year - 1, max_value, dtype=int)
+            np.random.shuffle(evenly_spaced_indices)
 
-    # Print information about the filtering process
+            for index in evenly_spaced_indices:
+                row = year_rows[index]
+                local_path = row["local_path"]
+
+                # Set "test" based on the year
+                if year == "2021":
+                    species_dict[local_path] = {
+                        "species": species, "test": "True"}
+                else:
+                    species_dict[local_path] = {
+                        "species": species, "test": "False"}
+
+    return species_dict
+
+
+def print_species_info(species_counts, local_paths_per_species, species_count_test, occurences_threshold):
     total_species = len(species_counts)
     total_filtered_species = len(local_paths_per_species)
-    total_filtered_local_paths = len(filtered_species_dict)
-    print(f"Total species: {total_species}")
-    print(
-        f"Species with at least {occurences_threshold} occurrences: {total_filtered_species}")
-    print(f"Total filtered video IDs: {total_filtered_local_paths}")
+    total_filtered_local_paths = sum(local_paths_per_species.values())
 
-    species_selected = []
+    result_str = f"Total species: {total_species}\n"
+    result_str += f"Species with at least {occurences_threshold} occurrences: {total_filtered_species}\n"
+    result_str += f"Total filtered video IDs: {total_filtered_local_paths}\n"
 
     # Print occurrences selected for each species
     for species, count in species_counts.items():
         if species in local_paths_per_species:
             selected_count = local_paths_per_species[species]
-            print(
-                f"Species: {species}, Occurrences Selected: {selected_count}")
-            species_selected.append(species)
+            result_str += f"Species: {species}, Occurrences Selected: {selected_count}\n"
 
     # Print test species selected
-    print(f"Testing videos selected:")
+    result_str += "Testing videos selected:\n"
     for species, count in species_count_test.items():
-        print(f"Species: {species}, Occurences selected: {count}")
+        result_str += f"Species: {species}, Occurrences selected: {count}\n"
+
+    # Print to console
+    print(result_str)
+
+    # Save to file
+    with open("preprocessing_log.txt", mode="w", encoding="utf-8") as log_file:
+        log_file.write(result_str)
+
+
+def read_species_data(input_file, yaml_file, utils_file):
+    species_counts = count_species_occurrences(
+        input_file, occurences_threshold)
+    occurences_threshold = 200
+    max_local_paths_per_species = 200
+
+    print("Creating species dictionary with balanced species")
+
+    species_dict = create_species_dict(
+        input_file, species_counts, occurences_threshold, max_local_paths_per_species)
+
+    print(
+        f"Maximum amount of videos taken for each species: {max_local_paths_per_species}")
+
+    print_species_info(
+        species_counts, local_paths_per_species, species_count_test)
+
+    species_selected = list(species_counts.keys())
 
     overwrite_classes_yaml(yaml_file, species_selected)
     overwrite_classes_utils(utils_file, species_selected)
 
-    # Specify the file path where you want to save the dictionary
     species_dict_path = 'filtered_species_dict.json'
 
-    # Serialize and save the dictionary to a JSON file
     with open(species_dict_path, 'w', encoding="utf-8") as file:
-        json.dump(filtered_species_dict, file)
+        json.dump(species_dict, file)
 
-    return filtered_species_dict
+    return species_dict
 
 
 def copy_videos(source_folder, destination_folder, species_dict):
