@@ -86,10 +86,8 @@ def get_unique_years(input_file):
     return sorted(list(unique_years))
 
 
-def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species):
+def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year):
     species_dict = {}
-    local_paths_per_species = defaultdict(int)
-    species_count_test = defaultdict(int)
     max_local_paths_per_species_per_year = 100
     max_count_species_test = 30
 
@@ -141,25 +139,28 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
     return species_dict
 
 
-def print_species_info(species_counts, local_paths_per_species, species_count_test, occurences_threshold):
+def print_species_info(species_counts, species_dict, occurences_threshold):
     total_species = len(species_counts)
-    total_filtered_species = len(local_paths_per_species)
-    total_filtered_local_paths = sum(local_paths_per_species.values())
+    species_selected = [entry["species"] for entry in species_dict.values()]
 
     result_str = f"Total species: {total_species}\n"
-    result_str += f"Species with at least {occurences_threshold} occurrences: {total_filtered_species}\n"
-    result_str += f"Total filtered video IDs: {total_filtered_local_paths}\n"
+    result_str += f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
+    result_str += f"Total video : {len(species_dict.keys())}"
 
     # Print occurrences selected for each species
     for species, count in species_counts.items():
-        if species in local_paths_per_species:
-            selected_count = local_paths_per_species[species]
-            result_str += f"Species: {species}, Occurrences Selected: {selected_count}\n"
+        if species in species_selected:
+            count_species_occurrences = sum(1 for entry in species_dict.values(
+            ) if entry["species"] == species and entry["test"] == "False")
+            result_str += f"Species: {species}, Occurrences Selected: {count_species_occurrences}\n"
 
     # Print test species selected
     result_str += "Testing videos selected:\n"
-    for species, count in species_count_test.items():
-        result_str += f"Species: {species}, Occurrences selected: {count}\n"
+    for species, count in species_counts.items():
+        if species in species_selected:
+            count_species_occurrences = sum(1 for entry in species_dict.values(
+            ) if entry["species"] == species and entry["test"] == "True")
+            result_str += f"Species: {species}, Occurrences selected: {count}\n"
 
     # Print to console
     print(result_str)
@@ -170,21 +171,21 @@ def print_species_info(species_counts, local_paths_per_species, species_count_te
 
 
 def read_species_data(input_file, yaml_file, utils_file):
+    occurences_threshold = 200
     species_counts = count_species_occurrences(
         input_file, occurences_threshold)
-    occurences_threshold = 200
-    max_local_paths_per_species = 200
+    max_local_paths_per_species_per_year = 200
 
     print("Creating species dictionary with balanced species")
 
     species_dict = create_species_dict(
-        input_file, species_counts, occurences_threshold, max_local_paths_per_species)
+        input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year)
 
     print(
-        f"Maximum amount of videos taken for each species: {max_local_paths_per_species}")
+        f"Maximum amount of videos taken for each species: {max_local_paths_per_species_per_year}")
 
-    print_species_info(
-        species_counts, local_paths_per_species, species_count_test)
+    print_species_info(species_counts,
+                       species_dict, occurences_threshold)
 
     species_selected = list(species_counts.keys())
 
