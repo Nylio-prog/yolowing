@@ -91,7 +91,7 @@ def get_unique_years(input_file):
 
 def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year):
     species_dict = {}
-    max_local_paths_per_species_per_year = 100
+    max_local_paths_per_species_per_year = 50
     max_count_species_test = 30
 
     # Read all rows from the input file
@@ -114,6 +114,7 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
         for year in years:
             year_rows = [
                 row for row in rows if row["date"].split("-")[0] == year]
+            print(year_rows)
             total_species_occurrences_per_year = len(year_rows)
 
             # Determine the appropriate max value based on the year
