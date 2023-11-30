@@ -65,11 +65,14 @@ def count_species_occurrences(input_file, occurences_threshold):
         if species != 'NA' and species != "Pas d'oiseau":
             species_counts[species] += 1
 
-    # Check and modify species below the occurrences_threshold to "Autre"
-    for species, count in species_counts.items():
-        if count < occurences_threshold:
-            species_counts[species] = 0
-            species_counts["Autre"] += count
+    # Identify species below the occurrences threshold
+    species_to_modify = [species for species, count in species_counts.items(
+    ) if count < occurences_threshold]
+
+    # Modify species below the occurrences threshold to "Autre"
+    for species in species_to_modify:
+        species_counts["Autre"] += species_counts[species]
+        del species_counts[species]
 
     return species_counts
 
@@ -172,9 +175,9 @@ def print_species_info(species_counts, species_dict, occurences_threshold):
 
 def read_species_data(input_file, yaml_file, utils_file):
     occurences_threshold = 200
+    max_local_paths_per_species_per_year = 200
     species_counts = count_species_occurrences(
         input_file, occurences_threshold)
-    max_local_paths_per_species_per_year = 200
 
     print("Creating species dictionary with balanced species")
 
