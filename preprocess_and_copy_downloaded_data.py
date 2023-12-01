@@ -113,7 +113,7 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
     for species, rows in rows_per_species.items():
         for year in years:
             year_rows = [
-                row for row in rows if row["date"].split("-")[0] == year]
+                row for row in rows if row["date"].split("-")[0] == str(year)]
             total_species_occurrences_per_year = len(year_rows)
 
             # Skip the year if there are no species for that year
