@@ -157,14 +157,14 @@ def print_species_info(species_dict, occurences_threshold):
     # Print occurrences selected for each species
     for species in species_selected:
         count_species_occurrences = sum(1 for entry in species_dict.values(
-        ) if entry["species"] == species and entry["test"] == "False")
+        ) if entry["species"] == str(species) and entry["test"] == "False")
         result_str += f"Species: {species}, Occurrences Selected: {count_species_occurrences}\n"
 
     # Print test species selected
     result_str += "Testing videos selected:\n"
     for species in species_selected:
         count_species_occurrences = sum(1 for entry in species_dict.values(
-        ) if entry["species"] == species and entry["test"] == "True")
+        ) if entry["species"] == str(species) and entry["test"] == "True")
         result_str += f"Species: {species}, Occurrences selected: {count_species_occurrences}\n"
 
     # Print to console
