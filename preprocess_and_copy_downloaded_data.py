@@ -154,7 +154,7 @@ def print_species_info(species_dict, occurences_threshold):
     result_str += f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
     result_str += f"Total video : {len(species_dict.keys())}\n"
     result_str += "Species selected"
-    result_str += species_selected
+    result_str += str(species_selected)
 
     # Print occurrences selected for each species
     for species in species_selected:
