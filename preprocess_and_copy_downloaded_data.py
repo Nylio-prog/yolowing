@@ -147,7 +147,9 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
 
 
 def print_species_info(species_dict, occurences_threshold):
-    species_selected = [entry["species"] for entry in species_dict.values()]
+    species_selected = list(set(entry["species"]
+                            for entry in species_dict.values()))
+
     total_species = len(species_selected)
 
     result_str = f"Total species: {total_species}\n"
@@ -193,7 +195,8 @@ def read_species_data(input_file, yaml_file, utils_file):
 
     print_species_info(species_dict, occurences_threshold)
 
-    species_selected = [entry["species"] for entry in species_dict.values()]
+    species_selected = list(set(entry["species"]
+                            for entry in species_dict.values()))
 
     overwrite_classes_yaml(yaml_file, species_selected)
     overwrite_classes_utils(utils_file, species_selected)
