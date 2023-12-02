@@ -152,7 +152,7 @@ def print_species_info(species_counts, species_dict, occurences_threshold):
 
     result_str = f"Total species: {total_species}\n"
     result_str += f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
-    result_str += f"Total video : {len(species_dict.keys())}"
+    result_str += f"Total video : {len(species_dict.keys())}\n"
 
     # Print occurrences selected for each species
     for species, count in species_counts.items():
@@ -189,12 +189,12 @@ def read_species_data(input_file, yaml_file, utils_file):
         input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year)
 
     print(
-        f"Maximum amount of videos taken for each species: {max_local_paths_per_species_per_year}")
+        f"Maximum amount of videos taken for each species per year: {max_local_paths_per_species_per_year}")
 
     print_species_info(species_counts,
                        species_dict, occurences_threshold)
 
-    species_selected = list(species_counts.keys())
+    species_selected = [entry["species"] for entry in species_dict.values()]
 
     overwrite_classes_yaml(yaml_file, species_selected)
     overwrite_classes_utils(utils_file, species_selected)
