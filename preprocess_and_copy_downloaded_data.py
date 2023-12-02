@@ -121,7 +121,7 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
                 continue
 
             # Determine the appropriate max value based on the year
-            if year == "2021":
+            if year == 2021:
                 max_value = max_count_species_test
             else:
                 max_value = max_local_paths_per_species_per_year
@@ -136,7 +136,7 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
                 local_path = row["local_path"]
 
                 # Set "test" based on the year
-                if year == "2021":
+                if year == 2021:
                     species_dict[local_path] = {
                         "species": species, "test": "True"}
                 else:
@@ -150,12 +150,9 @@ def print_species_info(species_dict, occurences_threshold):
     species_selected = list(set(entry["species"]
                             for entry in species_dict.values()))
 
-    total_species = len(species_selected)
-
-    result_str = f"Total species: {total_species}\n"
-    result_str += f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
+    result_str = f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
     result_str += f"Total video : {len(species_dict.keys())}\n"
-    result_str += "Species selected"
+    result_str += "Species selected : \n"
     result_str += str(species_selected)
 
     # Print occurrences selected for each species
