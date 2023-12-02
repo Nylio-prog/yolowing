@@ -148,13 +148,13 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
 
 def print_species_info(species_dict, occurences_threshold):
     species_selected = [entry["species"] for entry in species_dict.values()]
-    print("Species selected")
-    print(species_selected)
     total_species = len(species_selected)
 
     result_str = f"Total species: {total_species}\n"
     result_str += f"Species with at least {occurences_threshold} occurrences: {len(species_selected)}\n"
     result_str += f"Total video : {len(species_dict.keys())}\n"
+    result_str += "Species selected"
+    result_str += species_selected
 
     # Print occurrences selected for each species
     for species in species_selected:
