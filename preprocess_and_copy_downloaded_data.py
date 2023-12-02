@@ -148,6 +148,8 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
 
 def print_species_info(species_dict, occurences_threshold):
     species_selected = [entry["species"] for entry in species_dict.values()]
+    print("Species selected")
+    print(species_selected)
     total_species = len(species_selected)
 
     result_str = f"Total species: {total_species}\n"
