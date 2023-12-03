@@ -33,7 +33,7 @@ def main():
                         help="Input image size")
     parser.add_argument("-epochs", type=int, default=15,
                         help="Number of training epochs")
-    parser.add_argument("-batch", type=int, default=16,
+    parser.add_argument("-batch", type=int, default=12,
                         help="Batch size for training")
     parser.add_argument("-name", type=str, default="yolov8_birds",
                         help="Name for the folder containing the results of this train")
