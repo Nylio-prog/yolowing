@@ -162,7 +162,7 @@ def main():
                 class_id, x1, y1, x2, y2, image_width, image_height))
 
             frame_count += 1
-            print("Frame count : " + frame_count)
+            print("Frame count : " + str(frame_count))
             print("image saved")
 
     cap.release()
