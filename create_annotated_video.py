@@ -122,10 +122,10 @@ def main():
         if not ret:
             break
 
-        # Since we have many frames in one video, instead of learning on similar images, we take one frame every 3 frames.
-        if frame_count % 3 != 0:
-            frame_count += 1
-            continue
+        # # Since we have many frames in one video, instead of learning on similar images, we take one frame every 3 frames.
+        # if frame_count % 3 != 0:
+        #     frame_count += 1
+        #     continue
 
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
         detections = sv.Detections.from_ultralytics(result)
