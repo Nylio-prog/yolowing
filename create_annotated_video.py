@@ -126,6 +126,7 @@ def main():
         # Since we have many frames in one video, instead of learning on similar images, we take one frame every 3 frames.
         print("bool = " + str(frame_count % 3 != 0))
         if frame_count % 3 != 0:
+            frame_count += 1
             continue
 
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
