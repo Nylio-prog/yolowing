@@ -118,7 +118,7 @@ def main():
 
     while True:
         ret, frame = cap.read()
-        print("Total frame count : " + str(cap.get(cv2.CAP_PROP_FRAME_COUNT)))
+        print("frame count : " + str(frame_count))
 
         if not ret:
             break
