@@ -118,8 +118,7 @@ def main():
 
     while True:
         ret, frame = cap.read()
-        print("Frame count : " + str(frame_count))
-        print("new frame")
+        print("Total frame count : " + str(cap.get(cv2.CAP_PROP_FRAME_COUNT)))
 
         if not ret:
             break
@@ -163,7 +162,7 @@ def main():
             save_label(label_path, create_bird_annotation(
                 class_id, x1, y1, x2, y2, image_width, image_height))
 
-            frame_count += 1
+        frame_count += 1
 
     cap.release()
 
