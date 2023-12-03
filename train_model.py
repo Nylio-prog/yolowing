@@ -15,8 +15,8 @@ def main():
         -data (str): Path to the data configuration file (default: 'birds.yaml').
         -project (str): Directory where training runs and results will be saved (default: 'output_training').
         -imgsz (int): Input image size (default: 640).
-        -epochs (int): Number of training epochs (default: 5).
-        -batch (int): Batch size for training (default: 8).
+        -epochs (int): Number of training epochs (default: 15).
+        -batch (int): Batch size for training (default: 12).
         -name (str): Name for the experiment and output files (default: 'yolov8_birds').
     """
 

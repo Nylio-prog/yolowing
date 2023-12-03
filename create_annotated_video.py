@@ -122,8 +122,8 @@ def main():
         if not ret:
             break
 
-        # Since we have many frames in one video, instead of learning on similar images, we take one frame every 5 frames.
-        if frame_count % 5 != 0:
+        # Since we have many frames in one video, instead of learning on similar images, we take one frame every 3 frames.
+        if frame_count % 3 != 0:
             continue
 
         result = model(frame, agnostic_nms=True, verbose=False, device=0)[0]
@@ -136,7 +136,6 @@ def main():
 
         # We only want to detect one bird in the image as there could be multiple but the species given is only one.
         # This could possibly select the wrong bird's species if there are 2 and the first label is the wrong bird's species.
-        # Need to be more thoroughly inspected once we have real data.
         already_found_bird = False
         for label in labels:
             if (label != "bird" or already_found_bird):
@@ -163,6 +162,8 @@ def main():
                 class_id, x1, y1, x2, y2, image_width, image_height))
 
             frame_count += 1
+            print("Frame count : " + frame_count)
+            print("image saved")
 
     cap.release()
 
