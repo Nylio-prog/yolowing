@@ -118,6 +118,8 @@ def main():
 
     while True:
         ret, frame = cap.read()
+        print("Frame count : " + str(frame_count))
+        print("new frame")
 
         if not ret:
             break
@@ -162,8 +164,6 @@ def main():
                 class_id, x1, y1, x2, y2, image_width, image_height))
 
             frame_count += 1
-            print("Frame count : " + str(frame_count))
-            print("image saved")
 
     cap.release()
 
