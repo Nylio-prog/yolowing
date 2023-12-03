@@ -122,6 +122,7 @@ def main():
         if not ret:
             break
 
+        # Since we have many frames in one video, instead of learning on similar images, we take one frame every 5 frames.
         if frame_count % 5 != 0:
             continue
 
