@@ -161,7 +161,6 @@ def main():
             save_image(image_path, frame)
             save_label(label_path, create_bird_annotation(
                 class_id, x1, y1, x2, y2, image_width, image_height))
-            print("image saved")
 
         frame_count += 1
 
