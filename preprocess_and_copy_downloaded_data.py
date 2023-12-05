@@ -228,7 +228,7 @@ def reorganize_and_preprocess_videos(source_folder, destination_folder, input_fi
     create_destination_folder(destination_folder)
     species_dict = read_species_data(
         input_file, yaml_file, utils_file)
-    # copy_videos(source_folder, destination_folder, species_dict)
+    copy_videos(source_folder, destination_folder, species_dict)
     print("Preprocessed and copied videos successfully!")
 
 
