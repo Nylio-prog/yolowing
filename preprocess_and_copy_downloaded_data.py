@@ -69,7 +69,7 @@ def count_species_occurrences(input_file, occurences_threshold):
     species_to_modify = [species for species, count in species_counts.items(
     ) if count < occurences_threshold]
 
-    print("Species to modify:" + species_to_modify)
+    print("Species to modify:" + str(species_to_modify))
 
     # Modify species below the occurrences threshold to "autre"
     for species in species_to_modify:
@@ -77,7 +77,7 @@ def count_species_occurrences(input_file, occurences_threshold):
             "autre", 0) + species_counts.get(species, 0)
         del species_counts[species]
 
-    print("Species counts:" + species_counts)
+    print("Species counts:" + str(species_counts))
 
     return species_counts
 
