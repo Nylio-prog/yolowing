@@ -92,8 +92,7 @@ def get_unique_years(input_file):
 
 def create_species_dict(input_file, species_counts, max_local_paths_per_species_per_year):
     species_dict = {}
-    max_local_paths_per_species_per_year = 50
-    max_count_species_test = 30
+    max_count_species_test = 50
 
     # Read all rows from the input file
     with open(input_file, mode="r", newline="", encoding="utf-8") as file:
@@ -118,9 +117,6 @@ def create_species_dict(input_file, species_counts, max_local_paths_per_species_
             year_rows = [
                 row for row in rows if row["date"].split("-")[0] == str(year)]
             total_species_occurrences_per_year = len(year_rows)
-
-            print(
-                f"In {year}, there are {total_species_occurrences_per_year} {species}")
 
             # Skip the year if there are no species for that year
             if total_species_occurrences_per_year == 0:
@@ -184,7 +180,7 @@ def print_species_info(species_dict, occurences_threshold):
 
 def read_species_data(input_file, yaml_file, utils_file):
     occurences_threshold = 200
-    max_local_paths_per_species_per_year = 200
+    max_local_paths_per_species_per_year = 100
     species_counts = count_species_occurrences(
         input_file, occurences_threshold)
 
@@ -232,7 +228,7 @@ def reorganize_and_preprocess_videos(source_folder, destination_folder, input_fi
     create_destination_folder(destination_folder)
     species_dict = read_species_data(
         input_file, yaml_file, utils_file)
-    copy_videos(source_folder, destination_folder, species_dict)
+    # copy_videos(source_folder, destination_folder, species_dict)
     print("Preprocessed and copied videos successfully!")
 
 
