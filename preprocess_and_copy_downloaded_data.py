@@ -90,7 +90,7 @@ def get_unique_years(input_file):
     return sorted(list(unique_years))
 
 
-def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year):
+def create_species_dict(input_file, species_counts, max_local_paths_per_species_per_year):
     species_dict = {}
     max_local_paths_per_species_per_year = 50
     max_count_species_test = 30
@@ -107,7 +107,6 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
         if species in species_counts:
             rows_per_species[species].append(row)
         else:
-            print("Appending an 'Autre' species")
             rows_per_species["autre"].append(row)
 
     # Get unique years from the database
@@ -119,6 +118,9 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
             year_rows = [
                 row for row in rows if row["date"].split("-")[0] == str(year)]
             total_species_occurrences_per_year = len(year_rows)
+
+            print(
+                f"In {year}, there are {total_species_occurrences_per_year} {species}")
 
             # Skip the year if there are no species for that year
             if total_species_occurrences_per_year == 0:
@@ -189,7 +191,7 @@ def read_species_data(input_file, yaml_file, utils_file):
     print("Creating species dictionary with balanced species")
 
     species_dict = create_species_dict(
-        input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year)
+        input_file, species_counts, max_local_paths_per_species_per_year)
 
     print(
         f"Maximum amount of videos taken for each species per year: {max_local_paths_per_species_per_year}")
@@ -230,7 +232,7 @@ def reorganize_and_preprocess_videos(source_folder, destination_folder, input_fi
     create_destination_folder(destination_folder)
     species_dict = read_species_data(
         input_file, yaml_file, utils_file)
-    # copy_videos(source_folder, destination_folder, species_dict)
+    copy_videos(source_folder, destination_folder, species_dict)
     print("Preprocessed and copied videos successfully!")
 
 
