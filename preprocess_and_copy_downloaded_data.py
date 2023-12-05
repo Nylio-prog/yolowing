@@ -69,10 +69,15 @@ def count_species_occurrences(input_file, occurences_threshold):
     species_to_modify = [species for species, count in species_counts.items(
     ) if count < occurences_threshold]
 
+    print("Species to modify:" + species_to_modify)
+
     # Modify species below the occurrences threshold to "autre"
     for species in species_to_modify:
-        species_counts["autre"] += species_counts[species]
+        species_counts["autre"] = species_counts.get(
+            "autre", 0) + species_counts.get(species, 0)
         del species_counts[species]
+
+    print("Species counts:" + species_counts)
 
     return species_counts
 
@@ -103,7 +108,7 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
     rows_per_species = defaultdict(list)
     for row in all_rows:
         species = row["species"].lower()
-        if species_counts[species] >= occurences_threshold or species == "autre":
+        if species_counts[species] >= occurences_threshold:
             rows_per_species[species].append(row)
 
     # Get unique years from the database
