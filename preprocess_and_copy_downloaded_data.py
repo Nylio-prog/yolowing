@@ -71,7 +71,8 @@ def count_species_occurrences(input_file, occurences_threshold):
 
     # Modify species below the occurrences threshold to "autre"
     for species in species_to_modify:
-        species_counts["autre"] += species_counts[species]
+        species_counts["autre"] = species_counts.get(
+            "autre", 0) + species_counts.get(species, 0)
         del species_counts[species]
 
     return species_counts
@@ -89,10 +90,9 @@ def get_unique_years(input_file):
     return sorted(list(unique_years))
 
 
-def create_species_dict(input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year):
+def create_species_dict(input_file, species_counts, max_local_paths_per_species_per_year):
     species_dict = {}
-    max_local_paths_per_species_per_year = 50
-    max_count_species_test = 30
+    max_count_species_test = 50
 
     # Read all rows from the input file
     with open(input_file, mode="r", newline="", encoding="utf-8") as file:
@@ -103,8 +103,10 @@ def create_species_dict(input_file, species_counts, occurences_threshold, max_lo
     rows_per_species = defaultdict(list)
     for row in all_rows:
         species = row["species"].lower()
-        if species_counts[species] >= occurences_threshold or species == "autre":
+        if species in species_counts:
             rows_per_species[species].append(row)
+        else:
+            rows_per_species["autre"].append(row)
 
     # Get unique years from the database
     years = get_unique_years(input_file)
@@ -178,14 +180,14 @@ def print_species_info(species_dict, occurences_threshold):
 
 def read_species_data(input_file, yaml_file, utils_file):
     occurences_threshold = 200
-    max_local_paths_per_species_per_year = 200
+    max_local_paths_per_species_per_year = 100
     species_counts = count_species_occurrences(
         input_file, occurences_threshold)
 
     print("Creating species dictionary with balanced species")
 
     species_dict = create_species_dict(
-        input_file, species_counts, occurences_threshold, max_local_paths_per_species_per_year)
+        input_file, species_counts, max_local_paths_per_species_per_year)
 
     print(
         f"Maximum amount of videos taken for each species per year: {max_local_paths_per_species_per_year}")
