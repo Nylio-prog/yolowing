@@ -1,44 +1,46 @@
-Species with at least 200 occurrences: 20
-Total video : 2441
+Species with at least 200 occurrences: 21
+Total video : 4773
 Species selected : 
-['sittelle torchepot', 'tarin des aulnes', "verdier d'europe", 'mésange nonnette', 'pinson du nord', 'merle noir', 'chardonneret élégant', 'pinson des arbres', 'mésange charbonnière', 'geai des chênes', 'tourterelle turque', 'moineau domestique', 'mésange bleue', 'ecureuil roux', 'pigeon biset', 'mésange noire', 'rougegorge familier', 'moineau friquet', 'bouvreuil pivoine', 'pic épeiche']Species: sittelle torchepot, Occurrences Selected: 62
-Species: tarin des aulnes, Occurrences Selected: 57
-Species: verdier d'europe, Occurrences Selected: 101
-Species: mésange nonnette, Occurrences Selected: 116
-Species: pinson du nord, Occurrences Selected: 101
-Species: merle noir, Occurrences Selected: 102
-Species: chardonneret élégant, Occurrences Selected: 106
-Species: pinson des arbres, Occurrences Selected: 100
-Species: mésange charbonnière, Occurrences Selected: 149
-Species: geai des chênes, Occurrences Selected: 108
-Species: tourterelle turque, Occurrences Selected: 72
-Species: moineau domestique, Occurrences Selected: 101
-Species: mésange bleue, Occurrences Selected: 118
-Species: ecureuil roux, Occurrences Selected: 63
-Species: pigeon biset, Occurrences Selected: 51
-Species: mésange noire, Occurrences Selected: 150
-Species: rougegorge familier, Occurrences Selected: 103
-Species: moineau friquet, Occurrences Selected: 56
-Species: bouvreuil pivoine, Occurrences Selected: 70
-Species: pic épeiche, Occurrences Selected: 71
+['merle noir', 'moineau friquet', 'mésange bleue', 'geai des chênes', 'mésange noire', 'mésange charbonnière', 'mésange nonnette', 'pic épeiche', 'bouvreuil pivoine', 'tarin des aulnes', 'autre', 'moineau domestique', "verdier d'europe", 'sittelle torchepot', 'pigeon biset', 'chardonneret élégant', 'pinson des arbres', 'ecureuil roux', 'tourterelle turque', 'pinson du nord', 'rougegorge familier']Species: merle noir, Occurrences Selected: 202
+Species: moineau friquet, Occurrences Selected: 106
+Species: mésange bleue, Occurrences Selected: 218
+Species: geai des chênes, Occurrences Selected: 184
+Species: mésange noire, Occurrences Selected: 253
+Species: mésange charbonnière, Occurrences Selected: 249
+Species: mésange nonnette, Occurrences Selected: 216
+Species: pic épeiche, Occurrences Selected: 121
+Species: bouvreuil pivoine, Occurrences Selected: 120
+Species: tarin des aulnes, Occurrences Selected: 89
+Species: autre, Occurrences Selected: 400
+Species: moineau domestique, Occurrences Selected: 201
+Species: verdier d'europe, Occurrences Selected: 201
+Species: sittelle torchepot, Occurrences Selected: 112
+Species: pigeon biset, Occurrences Selected: 101
+Species: chardonneret élégant, Occurrences Selected: 206
+Species: pinson des arbres, Occurrences Selected: 200
+Species: ecureuil roux, Occurrences Selected: 90
+Species: tourterelle turque, Occurrences Selected: 122
+Species: pinson du nord, Occurrences Selected: 201
+Species: rougegorge familier, Occurrences Selected: 203
 Testing videos selected:
-Species: sittelle torchepot, Occurrences selected: 30
-Species: tarin des aulnes, Occurrences selected: 30
-Species: verdier d'europe, Occurrences selected: 30
-Species: mésange nonnette, Occurrences selected: 30
-Species: pinson du nord, Occurrences selected: 30
-Species: merle noir, Occurrences selected: 30
-Species: chardonneret élégant, Occurrences selected: 30
-Species: pinson des arbres, Occurrences selected: 30
-Species: mésange charbonnière, Occurrences selected: 30
+Species: merle noir, Occurrences selected: 50
+Species: moineau friquet, Occurrences selected: 50
+Species: mésange bleue, Occurrences selected: 50
 Species: geai des chênes, Occurrences selected: 16
-Species: tourterelle turque, Occurrences selected: 30
-Species: moineau domestique, Occurrences selected: 30
-Species: mésange bleue, Occurrences selected: 30
-Species: ecureuil roux, Occurrences selected: 30
-Species: pigeon biset, Occurrences selected: 30
-Species: mésange noire, Occurrences selected: 30
-Species: rougegorge familier, Occurrences selected: 30
-Species: moineau friquet, Occurrences selected: 30
+Species: mésange noire, Occurrences selected: 50
+Species: mésange charbonnière, Occurrences selected: 50
+Species: mésange nonnette, Occurrences selected: 50
+Species: pic épeiche, Occurrences selected: 50
 Species: bouvreuil pivoine, Occurrences selected: 28
-Species: pic épeiche, Occurrences selected: 30
+Species: tarin des aulnes, Occurrences selected: 50
+Species: autre, Occurrences selected: 50
+Species: moineau domestique, Occurrences selected: 50
+Species: verdier d'europe, Occurrences selected: 50
+Species: sittelle torchepot, Occurrences selected: 50
+Species: pigeon biset, Occurrences selected: 50
+Species: chardonneret élégant, Occurrences selected: 50
+Species: pinson des arbres, Occurrences selected: 50
+Species: ecureuil roux, Occurrences selected: 50
+Species: tourterelle turque, Occurrences selected: 34
+Species: pinson du nord, Occurrences selected: 50
+Species: rougegorge familier, Occurrences selected: 50
