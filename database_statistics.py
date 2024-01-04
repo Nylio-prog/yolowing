@@ -130,18 +130,18 @@ def main():
         for species, count in species_counts_by_species.items():
             file.write(f"{species}\t{count}\n")
 
-    # Filter species with occurrences <= 200
+    # Filter species with occurrences <= 400
     filtered_species_counts = {
         species: count
         for species, count in species_counts_by_species.items()
-        if count > 200
+        if count > 400
     }
 
     # Create the bar chart
     plt.bar(filtered_species_counts.keys(), filtered_species_counts.values())
     plt.xlabel("Species")
     plt.ylabel("Occurrences")
-    plt.title("Species Occurrences (Occurrences > 200)")
+    plt.title("Species Occurrences (Occurrences > 400)")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
 
