@@ -18,6 +18,14 @@ We can then train the model on this dataset to accurately recognize boxes and al
 
 <br>
 
+### VIRTUAL ENVIRONMENT
+
+```
+bash start_env.sh
+```
+
+<br>
+
 ### DATASET
 
 Private dataset containing videos of birds.
