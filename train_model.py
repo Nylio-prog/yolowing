@@ -27,7 +27,7 @@ def main():
                         default="yolov8m.pt", help="Model to use. Comes from ultralytics")
     parser.add_argument("-data", type=str, default="birds.yaml",
                         help="Path to the data configuration file")
-    parser.add_argument("-output", type=str, default="output_training",
+    parser.add_argument("-output", type=str, default="train_and_validation",
                         help="Directory for saving training runs and results")
     parser.add_argument("-imgsz", type=int, default=640,
                         help="Input image size")
@@ -35,7 +35,7 @@ def main():
                         help="Number of training epochs")
     parser.add_argument("-batch", type=int, default=12,
                         help="Batch size for training")
-    parser.add_argument("-name", type=str, default="yolov8_birds",
+    parser.add_argument("-name", type=str, default="yolov8_train",
                         help="Name for the folder containing the results of this train")
     args = parser.parse_args()
 
