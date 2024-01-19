@@ -4,6 +4,17 @@ import torch
 import time
 
 from ultralytics import YOLO
+from collections import Counter
+
+
+def most_common_value(arr):
+    counter = Counter(arr)
+    most_common = counter.most_common(1)
+
+    if most_common:
+        return most_common[0][0]
+    else:
+        return None
 
 
 def main():
@@ -60,6 +71,8 @@ def main():
             cap.get(3)), int(cap.get(4))))  # cap.get(3) returns width
 
     model = YOLO(args.m)
+    names = model.names
+    predicted_labels = []
 
     prev_end_time = 0
     start_time = 0
@@ -73,10 +86,15 @@ def main():
             break
 
         result = model(frame, agnostic_nms=True, conf=0.7)[0]
-
         # Visualize the results on the frame
         annotated_frame = result.plot(
             pil=True, line_width=5, font_size=40)
+
+        if result.boxes.cls.numel() == 0:
+            predicted_labels.append(None)
+        else:
+            for c in result.boxes.cls:
+                predicted_labels.append(names[int(c)])
 
         # Can't compute it for first frame
         if (prev_end_time > 0 and not (args.not_show) and not ((args.save))):
@@ -86,6 +104,8 @@ def main():
             # Add FPS text to the top-left corner of the frame
             fps_text = f"FPS: {fps:.2f}"
             # Add FPS text to the top-left corner of the frame
+            annotated_frame = annotated_frame.copy()
+
             cv2.putText(annotated_frame, fps_text, (10, 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
 
@@ -110,6 +130,9 @@ def main():
 
     global_elapsed_time = time.time() - global_start_time
     print(f"The whole process took {global_elapsed_time} seconds to execute")
+
+    print(
+        f"The most likely bird to be present is {most_common_value(predicted_labels) if most_common_value(predicted_labels) is not None else 'We cannot conclude which species are present in this video.'}")
 
 
 if __name__ == "__main__":
