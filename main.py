@@ -9,10 +9,14 @@ from collections import Counter
 
 def most_common_value(arr):
     counter = Counter(arr)
-    most_common = counter.most_common(1)
+    most_common = counter.most_common(2)
 
     if most_common:
-        return most_common[0][0]
+        # Check if the most common value is None, then return the second most common
+        if most_common[0][0] is None and len(most_common) > 1:
+            return most_common[1][0]
+        else:
+            return most_common[0][0]
     else:
         return None
 
@@ -132,7 +136,7 @@ def main():
     print(f"The whole process took {global_elapsed_time} seconds to execute")
 
     print(
-        f"The most likely bird to be present is {most_common_value(predicted_labels) if most_common_value(predicted_labels) is not None else 'We cannot conclude which species are present in this video.'}")
+        f"The most likely bird to be present is : {most_common_value(predicted_labels) if most_common_value(predicted_labels) is not None else 'We cannot conclude which species are present in this video.'}")
 
 
 if __name__ == "__main__":
