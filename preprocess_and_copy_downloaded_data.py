@@ -180,7 +180,7 @@ def print_species_info(species_dict, occurences_threshold):
 
 def read_species_data(input_file, yaml_file, utils_file):
     occurences_threshold = 400
-    max_local_paths_per_species_per_year = 100
+    max_local_paths_per_species_per_year = 50
     species_counts = count_species_occurrences(
         input_file, occurences_threshold)
 
